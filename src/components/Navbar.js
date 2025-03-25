@@ -1,55 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
-  const navStyles = {
-    backgroundColor: "black",
-    color: "white",
-    padding: "10px 0",
-    textAlign: "center",
-  };
-
-  const ulStyles = {
-    listStyle: "none",
-    padding: 0,
-    margin: 0,
-  };
-
-  const liStyles = {
-    display: "inline",
-    marginRight: "20px",
-  };
-
-  const linkStyles = {
-    textDecoration: "none",
-    color: "white",
-  };
-
   return (
-    <nav style={navStyles}>
-      <ul style={ulStyles}>
-        <li style={liStyles}>
-          <Link to="/" style={linkStyles}>
+    <nav className="navbar">
+      <ul className="navbar-ul">
+        <li className="navbar-li">
+          <Link to="/" className="navbar-link">
             Home
           </Link>
         </li>
-        <li style={liStyles}>
-          <Link to="/profile" style={linkStyles}>
-            Profile
-          </Link>
-        </li>
-        <li style={liStyles}>
-          <Link to="/product/1" style={linkStyles}>
-            Product
+        <li className="navbar-li">
+          <Link to="/products" className="navbar-link">
+            Products
           </Link>
         </li>
         <li className="navbar-li">
-          <Link to="/products" style={linkStyles}>
-            Products
-          </Link>{" "}
-          {/* New link */}
+          <Link to="/product/1" className="navbar-link">
+            Product
+          </Link>
         </li>
-        {/* You can add more navigation links here */}
+        <li className="navbar-li" style={{ marginLeft: "auto" }}>
+          {" "}
+          {/* Optional: Add some left margin */}
+          <Link to="/profile" className="navbar-link">
+            Profile
+          </Link>
+        </li>
       </ul>
     </nav>
   );
