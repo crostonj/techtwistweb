@@ -1,0 +1,43 @@
+/* components/ProfilePage.css */
+.profile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: 20px;
+    /* Spacing between grid items */
+}
+
+.full-width {
+    grid-column: 1 / -1;
+    /* Span across both columns */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Important for width to include padding and border */
+    background-color: #333;
+    /* Dark background for input fields */
+    color: white;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    grid-column: 1 / -1;
+    /* Span across both columns for the button */
+}
