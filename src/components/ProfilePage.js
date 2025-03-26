@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProfilePage.css";
 
 const usStates = [
@@ -61,10 +61,46 @@ function ProfilePage() {
   const [addressLine1, setAddressLine1] = useState("");
   const [addressLine2, setAddressLine2] = useState("");
   const [city, setCity] = useState("");
-  const [state, setState] = useState(""); // This will now hold the abbreviation
+  const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState("");
   const [country, setCountry] = useState("");
   const [saveStatus, setSaveStatus] = useState(null);
+  const [loading, setLoading] = useState(true); // To track loading state
+  const [loadError, setLoadError] = useState(null); // To track loading errors
+
+  useEffect(() => {
+    console.log("ProfilePage useEffect is running"); // Added console log
+    const loadProfile = async () => {
+      setLoading(true);
+      setLoadError(null);
+
+      try {
+        const response = await fetch(
+          "http://127.0.0.1:8088/api/userprofiles/users/user-123"
+        ); // Replace with your actual load profile endpoint
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setFirstName(data.firstName || "");
+        setLastName(data.lastName || "");
+        setEmail(data.email || "");
+        setAddressLine1(data.addressLine1 || "");
+        setAddressLine2(data.addressLine2 || "");
+        setCity(data.city || "");
+        setState(data.state || ""); // Assuming the API returns the state abbreviation
+        setZipCode(data.zipCode || "");
+        setCountry(data.country || "");
+        setLoading(false);
+      } catch (error) {
+        console.error("Error loading profile:", error);
+        setLoadError(error);
+        setLoading(false);
+      }
+    };
+
+    loadProfile();
+  }, []); // Empty dependency array means this runs once after the initial render
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -77,7 +113,7 @@ function ProfilePage() {
       addressLine1,
       addressLine2,
       city,
-      state, // This will be the selected abbreviation
+      state,
       zipCode,
       country,
     };
@@ -110,6 +146,22 @@ function ProfilePage() {
       alert("There was an error saving the profile.");
     }
   };
+
+  if (loading) {
+    return (
+      <div style={{ padding: "20px", color: "white", textAlign: "center" }}>
+        Loading profile data...
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div style={{ padding: "20px", color: "red", textAlign: "center" }}>
+        Error loading profile: {loadError.message}
+      </div>
+    );
+  }
 
   return (
     <div style={{ padding: "20px", color: "white" }}>
