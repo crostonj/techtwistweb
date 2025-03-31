@@ -1,40 +1,46 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import { AppBar, Toolbar, Typography, Container } from "@mui/material"; // Import Material UI components
+import Navbar from "./components/layout/Navbar";
 import HomePage from "./components/HomePage";
 import ProfilePage from "./components/ProfilePage";
 import ProductPage from "./components/ProductPage";
 import ProductsList from "./components/ProductList";
 import RetailTechnologyPage from "./components/RetailTechnologyPage";
-import Footer from "./components/Footer"; // Import the Footer component
+import PointofSale from "./components/PointofSale";
+import Footer from "./components/layout/Footer";
 import "./App.css";
 
 function App() {
   return (
     <Router>
       <div className="app-container">
-        <div className="app-header">
-          <Link to="/" className="header-link">
-            <img
-              src="/high_five_icon.svg"
-              alt="Homepage Link"
-              className="header-image"
-            />
-          </Link>
-          <h1 style={{ margin: 0, marginLeft: "20px" }}>TechTwist</h1>{" "}
-          {/* Added the title */}
-        </div>
+        <AppBar position="static" color="primary">
+          <Toolbar>
+            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+              <img
+                src="/high_five_icon.svg"
+                alt="Homepage Link"
+                style={{ height: "40px", marginRight: "20px" }}
+              />
+            </Link>
+            <Typography variant="h6" component="div">
+              TechTwist
+            </Typography>
+          </Toolbar>
+        </AppBar>
         <Navbar />
-        <div className="content-container">
+        <Container style={{ marginTop: "20px" }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/products" element={<ProductsList />} />
             <Route path="/retailtechnologypage" element={<RetailTechnologyPage />} />
+            <Route path="/pointofsale" element={<PointofSale />} />
           </Routes>
-        </div>
-        <Footer /> {/* Add the Footer component here */}
+        </Container>
+        <Footer />
       </div>
     </Router>
   );

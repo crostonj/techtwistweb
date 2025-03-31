@@ -1,90 +1,186 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './RetailTechnologyPage.css'; // Create a CSS file for this page
+import { Typography, Container, Box, Button, List, ListItem, ListItemText } from '@mui/material';
 
 function RetailTechnologyPage() {
   return (
-    <div className="retail-technology-page">
-      <header className="page-header">
-        <h1>Explore the Essential Tech for Modern Retail</h1>
-        <p>Discover the key technologies that can empower your small retail business to thrive in today's dynamic market.</p>
-      </header>
+    <Container maxWidth="lg" sx={{ padding: '2rem' }}>
+      <Box component="header" sx={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Typography variant="h3" component="h1" gutterBottom>
+          Explore the Essential Tech for Modern Retail
+        </Typography>
+        <Typography variant="subtitle1">
+          Discover the key technologies that can empower your small retail business to thrive in today's dynamic market.
+        </Typography>
+      </Box>
 
-      <section className="technology-section">
-        <h2>Point of Sale (POS) Systems</h2>
-        <p>A Point of Sale (POS) system is more than just a cash register. It's a comprehensive tool that manages your sales transactions, inventory, customer data, and provides valuable insights into your business performance.</p>
-        <h3>Key Features:</h3>
-        <ul>
-          <li>Processing sales (cash, credit/debit, mobile payments)</li>
-          <li>Inventory tracking and management</li>
-          <li>Customer database and CRM features</li>
-          <li>Reporting and analytics on sales, inventory, and customer behavior</li>
-          <li>Integration with other business tools (e.g., accounting software)</li>
-        </ul>
-        <h3>Benefits for Your Business:</h3>
-        <p>Streamline checkout processes, reduce errors, gain real-time visibility into your stock levels, understand your best-selling products, and personalize customer interactions.</p>
-        {/* Optional: Add examples of POS systems */}
-        <p><strong>Examples:</strong> Square, Shopify POS, Clover, Toast (for food), Lightspeed Retail.</p>
-        <Link to="/contact" className="learn-more-link">Learn More About POS Systems</Link>
-      </section>
+      <Box component="section" sx={{ marginBottom: '2rem' }}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          E-commerce Platforms
+        </Typography>
+        <Typography paragraph>
+          An e-commerce platform enables you to create and manage your online store, allowing you to sell your products to a global audience and cater to the growing number of online shoppers.
+        </Typography>
+        <Typography variant="h6" component="h3" gutterBottom>
+          Key Features:
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText primary="Product listings and catalogs" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Shopping cart functionality" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Secure checkout processes" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Order management and fulfillment tools" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Integration with payment gateways and shipping providers" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Marketing and SEO features" />
+          </ListItem>
+        </List>
+        <Typography variant="h6" component="h3" gutterBottom>
+          Benefits for Your Business:
+        </Typography>
+        <Typography paragraph>
+          Expand your market reach beyond your physical location, increase sales opportunities, provide convenience for your customers, and build a strong online brand presence.
+        </Typography>
+        <Typography paragraph>
+          <strong>Examples:</strong> Shopify, WooCommerce, Etsy, BigCommerce, Wix Stores.
+        </Typography>
+        <Button variant="contained" color="primary" component={Link} to="/contact">
+          Explore E-commerce Platform Options
+        </Button>
+      </Box>
 
-      <section className="technology-section">
-        <h2>E-commerce Platforms</h2>
-        <p>An e-commerce platform enables you to create and manage your online store, allowing you to sell your products to a global audience and cater to the growing number of online shoppers.</p>
-        <h3>Key Features:</h3>
-        <ul>
-          <li>Product listings and catalogs</li>
-          <li>Shopping cart functionality</li>
-          <li>Secure checkout processes</li>
-          <li>Order management and fulfillment tools</li>
-          <li>Integration with payment gateways and shipping providers</li>
-          <li>Marketing and SEO features</li>
-        </ul>
-        <h3>Benefits for Your Business:</h3>
-        <p>Expand your market reach beyond your physical location, increase sales opportunities, provide convenience for your customers, and build a strong online brand presence.</p>
-        {/* Optional: Add examples of e-commerce platforms */}
-        <p><strong>Examples:</strong> Shopify, WooCommerce, Etsy, BigCommerce, Wix Stores.</p>
-        <Link to="/contact" className="learn-more-link">Explore E-commerce Platform Options</Link>
-      </section>
+      <Box component="section" sx={{ marginBottom: '2rem' }}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Inventory Management Systems
+        </Typography>
+        <Typography paragraph>
+          Efficiently manage your stock levels and avoid costly stockouts or overstocking with an inventory management system. These systems help you track products, forecast demand, and automate purchasing.
+        </Typography>
+        <Typography variant="h6" component="h3" gutterBottom>
+          Key Features:
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText primary="Real-time inventory tracking" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Product information management" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Low stock alerts and notifications" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Demand forecasting and reporting" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Purchase order management" />
+          </ListItem>
+        </List>
+        <Typography variant="h6" component="h3" gutterBottom>
+          Benefits for Your Business:
+        </Typography>
+        <Typography paragraph>
+          Optimize your inventory investment, reduce waste from expired or unsold goods, improve order fulfillment accuracy, and save time on manual inventory tasks.
+        </Typography>
+        <Typography paragraph>
+          <strong>Examples:</strong> Zoho Inventory, Cin7 Omni, Katana, Sortly, Fishbowl Inventory.
+        </Typography>
+        <Button variant="contained" color="primary" component={Link} to="/contact">
+          Find the Right Inventory System
+        </Button>
+      </Box>
 
-      <section className="technology-section">
-        <h2>Inventory Management Systems</h2>
-        <p>Efficiently manage your stock levels and avoid costly stockouts or overstocking with an inventory management system. These systems help you track products, forecast demand, and automate purchasing.</p>
-        <h3>Key Features:</h3>
-        <ul>
-          <li>Real-time inventory tracking</li>
-          <li>Product information management</li>
-          <li>Low stock alerts and notifications</li>
-          <li>Demand forecasting and reporting</li>
-          <li>Purchase order management</li>
-        </ul>
-        <h3>Benefits for Your Business:</h3>
-        <p>Optimize your inventory investment, reduce waste from expired or unsold goods, improve order fulfillment accuracy, and save time on manual inventory tasks.</p>
-        {/* Optional: Add examples of inventory management systems */}
-        <p><strong>Examples:</strong> Zoho Inventory, Cin7 Omni, Katana, Sortly, Fishbowl Inventory.</p>
-        <Link to="/contact" className="learn-more-link">Find the Right Inventory System</Link>
-      </section>
+      <Box component="section" sx={{ marginBottom: '2rem' }}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Payment Processing Solutions
+        </Typography>
+        <Typography paragraph>
+          Providing a seamless and secure payment experience is crucial for customer satisfaction. Payment processing solutions enable you to accept various payment methods conveniently.
+        </Typography>
+        <Typography variant="h6" component="h3" gutterBottom>
+          Key Features:
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText primary="Processing credit and debit card payments" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Support for mobile payment options (e.g., Apple Pay, Google Pay)" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Online payment gateway integration" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Secure transaction processing" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Fraud prevention measures" />
+          </ListItem>
+        </List>
+        <Typography variant="h6" component="h3" gutterBottom>
+          Benefits for Your Business:
+        </Typography>
+        <Typography paragraph>
+          Offer flexibility and convenience to your customers, reduce the risk of fraudulent transactions, and ensure smooth and efficient payment processing.
+        </Typography>
+        <Typography paragraph>
+          <strong>Examples:</strong> Stripe, PayPal, Square Payments, Adyen.
+        </Typography>
+        <Button variant="contained" color="primary" component={Link} to="/contact">
+          Find the Right Payment Processor
+        </Button>
+      </Box>
 
-     
-      <section className="technology-section">
-        <h2>Payment Processing Solutions</h2>
-        <p>Providing a seamless and secure payment experience is crucial for customer satisfaction. Payment processing solutions enable you to accept various payment methods conveniently.</p>
-        <h3>Key Features:</h3>
-        <ul>
-          <li>Processing credit and debit card payments</li>
-          <li>Support for mobile payment options (e.g., Apple Pay, Google Pay)</li>
-          <li>Online payment gateway integration</li>
-          <li>Secure transaction processing</li>
-          <li>Fraud prevention measures</li>
-        </ul>
-        <h3>Benefits for Your Business:</h3>
-        <p>Offer flexibility and convenience to your customers, reduce the risk of fraudulent transactions, and ensure smooth and efficient payment processing.</p>
-        {/* Optional: Add examples of payment processors */}
-        <p><strong>Examples:</strong> Stripe, PayPal, Square Payments, Adyen.</p>
-        <Link to="/contact" className="learn-more-link">Find the Right Payment Processor</Link>
-      </section>
-
-    </div>
+      <Box component="section" sx={{ marginBottom: '2rem' }}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Point of Sale (POS) Systems
+        </Typography>
+        <Typography paragraph>
+          A POS system is essential for processing sales transactions, managing inventory, and generating sales reports. It can streamline your operations and improve customer service.
+        </Typography>
+        <Typography variant="h6" component="h3" gutterBottom>
+          Key Features:
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText primary="Sales transaction processing" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Inventory management" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Customer relationship management (CRM)" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Sales reporting and analytics" />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Employee management" />
+          </ListItem>
+        </List>
+        <Typography variant="h6" component="h3" gutterBottom>
+          Benefits for Your Business:
+        </Typography>
+        <Typography paragraph>
+          Improve the efficiency of your sales process, gain insights into your sales performance, manage your inventory more effectively, and enhance customer satisfaction.
+        </Typography>
+        <Typography paragraph>
+          <strong>Examples:</strong> Square POS, Lightspeed, Vend, Clover, Toast.
+        </Typography>
+        <Button variant="contained" color="primary" component={Link} to="/pointofsale">
+          Learn More About POS Systems
+        </Button>
+      </Box>
+    </Container>
   );
 }
 

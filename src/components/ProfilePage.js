@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
-import "./ProfilePage.css";
+import {
+  TextField,
+  Select,
+  MenuItem,
+  InputLabel,
+  FormControl,
+  Button,
+  CircularProgress,
+  Alert,
+} from "@mui/material";
+import { loadUserProfile, saveUserProfile } from "../services/apiService"; // Import utility functions
 
 const usStates = [
   { name: "Alabama", abbreviation: "AL" },
@@ -55,6 +65,7 @@ const usStates = [
 ];
 
 function ProfilePage() {
+  const userId = "user-123"; // Define the user ID as a variable
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -67,21 +78,19 @@ function ProfilePage() {
   const [saveStatus, setSaveStatus] = useState(null);
   const [loading, setLoading] = useState(true); // To track loading state
   const [loadError, setLoadError] = useState(null); // To track loading errors
+  const [alertMessage, setAlertMessage] = useState(null); // To store alert messages
+  const [alertSeverity, setAlertSeverity] = useState(null); // To store alert severity
 
   useEffect(() => {
-    console.log("ProfilePage useEffect is running"); // Added console log
+    const controller = new AbortController(); // Create an AbortController
+    const signal = controller.signal;
+
     const loadProfile = async () => {
       setLoading(true);
       setLoadError(null);
 
       try {
-        const response = await fetch(
-          "http://127.0.0.1:8088/api/userprofiles/users/user-123"
-        ); // Replace with your actual load profile endpoint
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
+        const data = await loadUserProfile(userId, signal); // Pass signal to API call
         setFirstName(data.firstName || "");
         setLastName(data.lastName || "");
         setEmail(data.email || "");
@@ -93,14 +102,22 @@ function ProfilePage() {
         setCountry(data.country || "");
         setLoading(false);
       } catch (error) {
-        console.error("Error loading profile:", error);
-        setLoadError(error);
-        setLoading(false);
+        if (error.name === "AbortError") {
+          console.log("Fetch aborted");
+        } else {
+          console.error("Error loading profile:", error);
+          setLoadError(error);
+          setLoading(false);
+        }
       }
     };
 
     loadProfile();
-  }, []); // Empty dependency array means this runs once after the initial render
+
+    return () => {
+      controller.abort(); // Abort fetch on unmount
+    };
+  }, [userId]); // Dependency array includes userId
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -119,178 +136,132 @@ function ProfilePage() {
     };
 
     try {
-      const response = await fetch(
-        "http://localhost:8081/profile-service/save-profile",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(profileData),
-        }
-      );
-
-      if (response.ok) {
-        const responseData = await response.json();
-        console.log("Profile saved successfully:", responseData);
-        setSaveStatus("success");
-        alert("Profile saved successfully!");
-      } else {
-        console.error("Error saving profile:", response.status);
-        setSaveStatus("error");
-        alert("Error saving profile.");
-      }
+      await saveUserProfile(profileData); // Use utility function
+      setSaveStatus("success");
+      setAlertMessage("Profile saved successfully!");
+      setAlertSeverity("success");
     } catch (error) {
       console.error("There was an error saving the profile:", error);
       setSaveStatus("error");
-      alert("There was an error saving the profile.");
+      setAlertMessage("There was an error saving the profile.");
+      setAlertSeverity("error");
     }
   };
 
   if (loading) {
     return (
-      <div style={{ padding: "20px", color: "white", textAlign: "center" }}>
-        Loading profile data...
+      <div style={{ padding: "20px", textAlign: "center" }}>
+        <CircularProgress />
+        <p>Loading profile data...</p>
       </div>
     );
   }
 
   if (loadError) {
     return (
-      <div style={{ padding: "20px", color: "red", textAlign: "center" }}>
-        Error loading profile: {loadError.message}
+      <div style={{ padding: "20px", textAlign: "center" }}>
+        <Alert severity="error">Error loading profile: {loadError.message}</Alert>
       </div>
     );
   }
 
   return (
-    <div style={{ padding: "20px", color: "white" }}>
+    <div style={{ padding: "20px", position: "relative", zIndex: 1 }}>
       <h1>Profile Information</h1>
-      {saveStatus === "loading" && <p>Saving profile...</p>}
-      {saveStatus === "success" && (
-        <p style={{ color: "green" }}>Profile saved successfully!</p>
-      )}
-      {saveStatus === "error" && (
-        <p style={{ color: "red" }}>Error saving profile.</p>
-      )}
+      {saveStatus === "loading" && <Alert severity="info">Saving profile...</Alert>}
+      {alertMessage && <Alert severity={alertSeverity}>{alertMessage}</Alert>}
       <form className="profile-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="firstName" className="form-label">
-            First Name:
-          </label>
-          <input
-            type="text"
-            id="firstName"
-            className="form-input"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="lastName" className="form-label">
-            Last Name:
-          </label>
-          <input
-            type="text"
-            id="lastName"
-            className="form-input"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </div>
-        <div className="full-width">
-          <label htmlFor="email" className="form-label">
-            Email Address:
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="form-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="full-width">
-          <label htmlFor="addressLine1" className="form-label">
-            Mailing Address Line 1:
-          </label>
-          <input
-            type="text"
-            id="addressLine1"
-            className="form-input"
-            value={addressLine1}
-            onChange={(e) => setAddressLine1(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="addressLine2" className="form-label">
-            Mailing Address Line 2 (Optional):
-          </label>
-          <input
-            type="text"
-            id="addressLine2"
-            className="form-input"
-            value={addressLine2}
-            onChange={(e) => setAddressLine2(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="city" className="form-label">
-            City:
-          </label>
-          <input
-            type="text"
-            id="city"
-            className="form-input"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="state" className="form-label">
-            State:
-          </label>
-          <select
-            id="state"
-            className="form-input"
-            value={state}
+        <TextField
+          label="First Name"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+        />
+        <TextField
+          label="Last Name"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+        />
+        <TextField
+          label="Email Address"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <TextField
+          label="Mailing Address Line 1"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          value={addressLine1}
+          onChange={(e) => setAddressLine1(e.target.value)}
+        />
+        <TextField
+          label="Mailing Address Line 2 (Optional)"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          value={addressLine2}
+          onChange={(e) => setAddressLine2(e.target.value)}
+        />
+        <TextField
+          label="City"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
+        <FormControl fullWidth margin="normal">
+          <InputLabel id="state-label">State</InputLabel>
+          <Select
+            labelId="state-label"
+            value={state || ""} // Ensure value is never undefined
             onChange={(e) => setState(e.target.value)}
           >
-            <option value="">Select a State</option>
+            <MenuItem value="">
+              <em>Select a State</em>
+            </MenuItem>
             {usStates.map((usState) => (
-              <option key={usState.abbreviation} value={usState.abbreviation}>
+              <MenuItem key={usState.abbreviation} value={usState.abbreviation}>
                 {usState.name}
-              </option>
+              </MenuItem>
             ))}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="zipCode" className="form-label">
-            Zip/Postal Code:
-          </label>
-          <input
-            type="text"
-            id="zipCode"
-            className="form-input"
-            value={zipCode}
-            onChange={(e) => setZipCode(e.target.value)}
-          />
-        </div>
-        <div className="full-width">
-          <label htmlFor="country" className="form-label">
-            Country:
-          </label>
-          <input
-            type="text"
-            id="country"
-            className="form-input"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="submit-button">
+          </Select>
+        </FormControl>
+        <TextField
+          label="Zip/Postal Code"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          value={zipCode}
+          onChange={(e) => setZipCode(e.target.value)}
+        />
+        <TextField
+          label="Country"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          value={country}
+          onChange={(e) => setCountry(e.target.value)}
+        />
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          fullWidth
+          style={{ marginTop: "20px" }}
+        >
           Save
-        </button>
+        </Button>
       </form>
     </div>
   );
