@@ -21,6 +21,11 @@ function Navbar() {
             Product
           </Link>
         </li>
+        <li className="navbar-li">
+          <Link to="/RetailTechnologyPage" className="navbar-link">
+            Retail Technology
+          </Link>
+        </li>
         <li className="navbar-li" style={{ marginLeft: "auto" }}>
           {" "}
           {/* Optional: Add some left margin */}

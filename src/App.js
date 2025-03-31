@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import ProfilePage from "./components/ProfilePage";
 import ProductPage from "./components/ProductPage";
 import ProductsList from "./components/ProductList";
+import RetailTechnologyPage from "./components/RetailTechnologyPage";
 import Footer from "./components/Footer"; // Import the Footer component
 import "./App.css";
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/products" element={<ProductsList />} />
+            <Route path="/retailtechnologypage" element={<RetailTechnologyPage />} />
           </Routes>
         </div>
         <Footer /> {/* Add the Footer component here */}
