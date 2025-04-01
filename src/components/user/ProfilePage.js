@@ -9,7 +9,7 @@ import {
   CircularProgress,
   Alert,
 } from "@mui/material";
-import { loadUserProfile, saveUserProfile } from "../services/apiService"; // Import utility functions
+import { loadUserProfile, saveUserProfile } from "../../services/apiService"; // Import utility functions
 
 const usStates = [
   { name: "Alabama", abbreviation: "AL" },

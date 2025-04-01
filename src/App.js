@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Container } from "@mui/material"; // Import Material UI components
 import Navbar from "./components/layout/Navbar";
 import HomePage from "./components/HomePage";
-import ProfilePage from "./components/ProfilePage";
+import ProfilePage from "./components/user/ProfilePage";
 import ProductPage from "./components/ProductPage";
 import ProductsList from "./components/ProductList";
 import RetailTechnologyPage from "./components/RetailTechnologyPage";
