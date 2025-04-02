@@ -1,5 +1,8 @@
 export const loadUserProfile = async (userId, signal) => {
-  const response = await fetch(`http://localhost:8088/api/userprofiles/users/${userId}`, { signal });
+  const response = await fetch(
+    `https://userprofile.purplepond-4096c986.westus2.azurecontainerapps.io/userprofiles/users/${userId}`,
+    { signal }
+  );
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
@@ -7,13 +10,16 @@ export const loadUserProfile = async (userId, signal) => {
 };
 
 export const saveUserProfile = async (profileData) => {
-  const response = await fetch("http://localhost:8081/profile-service/save-profile", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(profileData),
-  });
+  const response = await fetch(
+    "https://userprofile.purplepond-4096c986.westus2.azurecontainerapps.io/userprofiles/updateProfile",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(profileData),
+    }
+  );
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);

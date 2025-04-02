@@ -1,47 +1,36 @@
 import React from "react";
+import { AppBar, Toolbar, Typography, Link } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1976d2", // Customize primary color
+    },
+    text: {
+      primary: "#ffffff", // Customize text color
+    },
+  },
+});
 
 function Footer() {
-  const footerStyles = {
-    backgroundColor: "blue",
-    color: "white",
-    padding: "20px 0",
-    textAlign: "center",
-    width: "100%",
-  };
-
-  const menuStyles = {
-    listStyle: "none",
-    padding: 0,
-    margin: 0,
-    display: "inline-block",
-  };
-
-  const listItemStyles = {
-    display: "inline",
-    margin: "0 15px",
-  };
-
-  const linkStyles = {
-    textDecoration: "none",
-    color: "white",
-  };
-
   return (
-    <footer style={footerStyles}>
-      <ul style={menuStyles}>
-        <li style={listItemStyles}>
-          <a href="/about" style={linkStyles}>
-            About
-          </a>
-        </li>
-        <li style={listItemStyles}>
-          <a href="/contact" style={linkStyles}>
-            Contact Us
-          </a>
-        </li>
-      </ul>
-      {/* You can add copyright information or other footer content here */}
-    </footer>
+    <ThemeProvider theme={theme}>
+      <AppBar position="static" color="primary" component="footer">
+        <Toolbar style={{ justifyContent: "center" }}>
+          <Typography variant="body1" color="inherit" style={{ marginRight: "15px" }}>
+            <Link href="/about" color="inherit" underline="hover">
+              About
+            </Link>
+          </Typography>
+          <Typography variant="body1" color="inherit">
+            <Link href="/contact" color="inherit" underline="hover">
+              Contact Us
+            </Link>
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </ThemeProvider>
   );
 }
 

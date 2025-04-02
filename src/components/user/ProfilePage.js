@@ -9,6 +9,7 @@ import {
   CircularProgress,
   Alert,
 } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles"; // Import ThemeProvider and createTheme
 import { loadUserProfile, saveUserProfile } from "../../services/apiService"; // Import utility functions
 
 const usStates = [
@@ -63,6 +64,20 @@ const usStates = [
   { name: "Wisconsin", abbreviation: "WI" },
   { name: "Wyoming", abbreviation: "WY" },
 ];
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1976d2", // Customize primary color
+    },
+    secondary: {
+      main: "#dc004e", // Customize secondary color
+    },
+  },
+  typography: {
+    fontFamily: "Roboto, Arial, sans-serif", // Customize typography
+  },
+});
 
 function ProfilePage() {
   const userId = "user-123"; // Define the user ID as a variable
@@ -166,104 +181,106 @@ function ProfilePage() {
   }
 
   return (
-    <div style={{ padding: "20px", position: "relative", zIndex: 1 }}>
-      <h1>Profile Information</h1>
-      {saveStatus === "loading" && <Alert severity="info">Saving profile...</Alert>}
-      {alertMessage && <Alert severity={alertSeverity}>{alertMessage}</Alert>}
-      <form className="profile-form" onSubmit={handleSubmit}>
-        <TextField
-          label="First Name"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-        <TextField
-          label="Last Name"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        />
-        <TextField
-          label="Email Address"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <TextField
-          label="Mailing Address Line 1"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          value={addressLine1}
-          onChange={(e) => setAddressLine1(e.target.value)}
-        />
-        <TextField
-          label="Mailing Address Line 2 (Optional)"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          value={addressLine2}
-          onChange={(e) => setAddressLine2(e.target.value)}
-        />
-        <TextField
-          label="City"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <FormControl fullWidth margin="normal">
-          <InputLabel id="state-label">State</InputLabel>
-          <Select
-            labelId="state-label"
-            value={state || ""} // Ensure value is never undefined
-            onChange={(e) => setState(e.target.value)}
-          >
-            <MenuItem value="">
-              <em>Select a State</em>
-            </MenuItem>
-            {usStates.map((usState) => (
-              <MenuItem key={usState.abbreviation} value={usState.abbreviation}>
-                {usState.name}
+    <ThemeProvider theme={theme}>
+      <div style={{ padding: "20px", position: "relative", zIndex: 1 }}>
+        <h1>Profile Information</h1>
+        {saveStatus === "loading" && <Alert severity="info">Saving profile...</Alert>}
+        {alertMessage && <Alert severity={alertSeverity}>{alertMessage}</Alert>}
+        <form className="profile-form" onSubmit={handleSubmit}>
+          <TextField
+            label="First Name"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <TextField
+            label="Last Name"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <TextField
+            label="Email Address"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField
+            label="Mailing Address Line 1"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={addressLine1}
+            onChange={(e) => setAddressLine1(e.target.value)}
+          />
+          <TextField
+            label="Mailing Address Line 2 (Optional)"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={addressLine2}
+            onChange={(e) => setAddressLine2(e.target.value)}
+          />
+          <TextField
+            label="City"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <FormControl fullWidth margin="normal">
+            <InputLabel id="state-label">State</InputLabel>
+            <Select
+              labelId="state-label"
+              value={state || ""} // Ensure value is never undefined
+              onChange={(e) => setState(e.target.value)}
+            >
+              <MenuItem value="">
+                <em>Select a State</em>
               </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <TextField
-          label="Zip/Postal Code"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          value={zipCode}
-          onChange={(e) => setZipCode(e.target.value)}
-        />
-        <TextField
-          label="Country"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          style={{ marginTop: "20px" }}
-        >
-          Save
-        </Button>
-      </form>
-    </div>
+              {usStates.map((usState) => (
+                <MenuItem key={usState.abbreviation} value={usState.abbreviation}>
+                  {usState.name}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <TextField
+            label="Zip/Postal Code"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={zipCode}
+            onChange={(e) => setZipCode(e.target.value)}
+          />
+          <TextField
+            label="Country"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+            style={{ marginTop: "20px" }}
+          >
+            Save
+          </Button>
+        </form>
+      </div>
+    </ThemeProvider>
   );
 }
 
