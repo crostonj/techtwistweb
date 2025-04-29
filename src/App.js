@@ -11,6 +11,7 @@ import RetailTechnologyPage from "./components/RetailTechnologyPage";
 import PointofSale from "./components/PointofSale";
 import Footer from "./components/layout/Footer";
 import "./App.css";
+import POSInfoPage from "./components/POSInfoPage";
 
 const theme = createTheme({
   palette: {
@@ -54,6 +55,7 @@ function App() {
               <Route path="/products" element={<ProductsList />} />
               <Route path="/retailtechnologypage" element={<RetailTechnologyPage />} />
               <Route path="/pointofsale" element={<PointofSale />} />
+              <Route path="/POSInfoPage" element={<POSInfoPage />} />
             </Routes>
           </Container>
           <Footer />

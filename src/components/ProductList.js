@@ -1,61 +1,101 @@
 import React, { useState, useEffect } from "react";
+import { fetchProducts } from "../services/apiService"; // Import the fetchProducts function
+import {
+  CircularProgress,
+  Typography,
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+  Alert,
+  TextField,
+} from "@mui/material";
 
 function ProductsList() {
-  const [products, setProducts] = useState();
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const loadProducts = async () => {
       try {
-        const response = await fetch("http://localhost:8080/get-all-products");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await fetchProducts();
+        console.log("Fetched products:", data); // Log the fetched products
+        if (!data || data.length === 0) {
+          throw new Error("No products found");
         }
-        const data = await response.json();
         setProducts(data);
+        setFilteredProducts(data); // Initialize filtered products
         setLoading(false);
-      } catch (error) {
-        setError(error);
+      } catch (err) {
+        setError(err);
         setLoading(false);
       }
     };
 
-    fetchProducts();
-  }); // Empty dependency array means this effect runs once after the initial render
+    loadProducts();
+  }, []); // Empty dependency array ensures this runs only once when the component mounts
+
+  // Handle filter input change
+  const handleFilterChange = (event) => {
+    const value = event.target.value.toLowerCase();
+    setFilter(value);
+    setFilteredProducts(
+      products.filter((product) =>
+        product.name.toLowerCase().includes(value)
+      )
+    );
+  };
 
   if (loading) {
     return (
-      <p style={{ color: "white", textAlign: "center", padding: "20px" }}>
-        Loading products...
-      </p>
+      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+        <CircularProgress />
+      </Box>
     );
   }
 
   if (error) {
     return (
-      <p style={{ color: "red", textAlign: "center", padding: "20px" }}>
-        Error loading products: {error.message}
-      </p>
+      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+        <Alert severity="error">Error loading products: {error.message}</Alert>
+      </Box>
     );
   }
 
   return (
-    <div style={{ padding: "20px", color: "white" }}>
-      <h2>All Products</h2>
-      {products.length > 0 ? (
-        <ul>
-          {products.map((product) => (
-            <li key={product.id} style={{ marginBottom: "10px" }}>
-              <strong>{product.name}</strong> - ${product.price}
-              {/* You can display more product details here */}
-            </li>
+    <Box sx={{ padding: "20px" }}>
+      <Typography variant="h4" gutterBottom>
+        All Products
+      </Typography>
+      {/* Filter Bar */}
+      <Box sx={{ marginBottom: "20px" }}>
+        <TextField
+          label="Filter by name"
+          variant="outlined"
+          fullWidth
+          value={filter}
+          onChange={handleFilterChange}
+        />
+      </Box>
+      {/* Product List */}
+      {filteredProducts.length > 0 ? (
+        <List>
+          {filteredProducts.map((product) => (
+            <ListItem key={product.id} sx={{ borderBottom: "1px solid #ccc" }}>
+              <ListItemText
+                primary={product.name}
+                secondary={`Price: $${product.price}`}
+              />
+            </ListItem>
           ))}
-        </ul>
+        </List>
       ) : (
-        <p>No products available.</p>
+        <Typography variant="body1">No products available.</Typography>
       )}
-    </div>
+    </Box>
   );
 }
 

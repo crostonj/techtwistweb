@@ -26,10 +26,7 @@ function Navbar() {
           <Button color="inherit" component={Link} to="/product/1">
             Product
           </Button>
-          <Button
-            color="inherit"
-            onClick={handleMenuOpen}
-          >
+          <Button color="inherit" onClick={handleMenuOpen}>
             Retail Technology
           </Button>
           <Menu
@@ -50,6 +47,13 @@ function Navbar() {
               onClick={handleMenuClose}
             >
               Point of Sale
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/POSInfoPage"
+              onClick={handleMenuClose}
+            >
+              POSInfoPage
             </MenuItem>
           </Menu>
         </Box>

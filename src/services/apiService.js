@@ -1,6 +1,8 @@
+const site = "http://10.0.0.201";
+
 export const loadUserProfile = async (userId, signal) => {
   const response = await fetch(
-    `https://userprofile.purplepond-4096c986.westus2.azurecontainerapps.io/userprofiles/users/${userId}`,
+    `${site}/profile/name/${userId}`,
     { signal }
   );
   if (!response.ok) {
@@ -11,7 +13,7 @@ export const loadUserProfile = async (userId, signal) => {
 
 export const saveUserProfile = async (profileData) => {
   const response = await fetch(
-    "https://userprofile.purplepond-4096c986.westus2.azurecontainerapps.io/userprofiles/updateProfile",
+    `${site}/profile/updateProfile`,
     {
       method: "POST",
       headers: {
@@ -25,4 +27,25 @@ export const saveUserProfile = async (profileData) => {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
   return response.json();
+};
+
+export const fetchProducts = async () => {
+  try {
+    const response = await fetch(
+      `${site}/product/list`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+
+  } catch (error) {
+
+  }
 };

@@ -80,7 +80,7 @@ const theme = createTheme({
 });
 
 function ProfilePage() {
-  const userId = "user-123"; // Define the user ID as a variable
+  const userId = "User1"; // Define the user ID as a variable
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
