@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, ListItem, ListItemText, Typography } from "@mui/material";
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, onClick }) => {
   return (
     <ListItem
       sx={{
@@ -13,7 +13,13 @@ const ProductItem = ({ product }) => {
       <ListItemText
         primary={
           <>
-            <Typography variant="h6">{product.name}</Typography>
+            <Typography
+              variant="h6"
+              sx={{ cursor: "pointer", textDecoration: "underline" }}
+              onClick={onClick} // Trigger navigation to ProductDetail
+            >
+              {product.name}
+            </Typography>
             <Typography variant="body2" color="textSecondary">
               {product.description}
             </Typography>

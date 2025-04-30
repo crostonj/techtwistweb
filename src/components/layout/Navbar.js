@@ -23,9 +23,6 @@ function Navbar() {
           <Button color="inherit" component={Link} to="/products">
             Products
           </Button>
-          <Button color="inherit" component={Link} to="/product/1">
-            Product
-          </Button>
           <Button color="inherit" onClick={handleMenuOpen}>
             Retail Technology
           </Button>

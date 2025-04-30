@@ -5,13 +5,14 @@ import { ThemeProvider, createTheme } from "@mui/material/styles"; // Import The
 import Navbar from "./components/layout/Navbar";
 import HomePage from "./components/HomePage";
 import ProfilePage from "./components/user/ProfilePage";
-import ProductPage from "./components/ProductPage";
-import ProductsList from "./components/ProductList";
+import ProductsList from "./components/Product/ProductList";
 import RetailTechnologyPage from "./components/RetailTechnologyPage";
 import PointofSale from "./components/PointofSale";
 import Footer from "./components/layout/Footer";
 import "./App.css";
 import POSInfoPage from "./components/POSInfoPage";
+import AboutUs from "./pages/AboutUs"; // Import AboutUs component
+import ContactUs from "./pages/ContactUs"; // Import ContactUs component
 
 const theme = createTheme({
   palette: {
@@ -50,8 +51,9 @@ function App() {
           <Container style={{ marginTop: "20px" }}>
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<ContactUs />} /> {/* Add ContactUs route */}
               <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/product/:id" element={<ProductPage />} />
               <Route path="/products" element={<ProductsList />} />
               <Route path="/retailtechnologypage" element={<RetailTechnologyPage />} />
               <Route path="/pointofsale" element={<PointofSale />} />

@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Link } from "@mui/material";
+import { AppBar, Toolbar, Typography, Link, Box, Button } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -14,8 +14,34 @@ const theme = createTheme({
 });
 
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <ThemeProvider theme={theme}>
+      {/* Back to Top Banner */}
+      <Box
+        sx={{
+          backgroundColor: "#f5f5f5",
+          padding: "10px 0",
+          textAlign: "center",
+        }}
+      >
+        <Button
+          variant="text"
+          onClick={scrollToTop}
+          sx={{
+            color: "#1976d2",
+            fontWeight: "bold",
+            textTransform: "none",
+          }}
+        >
+          Back to Top
+        </Button>
+      </Box>
+
+      {/* Footer */}
       <AppBar position="static" color="primary" component="footer">
         <Toolbar style={{ justifyContent: "center" }}>
           <Typography variant="body1" color="inherit" style={{ marginRight: "15px" }}>
