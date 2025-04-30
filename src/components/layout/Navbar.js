@@ -17,9 +17,6 @@ function Navbar() {
     <AppBar position="static">
       <Toolbar>
         <Box sx={{ display: "flex", flexGrow: 1 }}>
-          <Button color="inherit" component={Link} to="/">
-            Home
-          </Button>
           <Button color="inherit" component={Link} to="/products">
             Products
           </Button>
