@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { fetchProducts } from "../services/apiService"; // Import the fetchProducts function
+import { fetchProducts } from "../services/apiService";
 import {
   CircularProgress,
   Typography,
   Box,
   List,
-  ListItem,
-  ListItemText,
   Alert,
   TextField,
   Button,
@@ -15,6 +13,7 @@ import {
   Checkbox,
   FormControlLabel,
 } from "@mui/material";
+import ProductItem from "./ProductItem"; // Import the reusable component
 
 function ProductsList() {
   const [products, setProducts] = useState([]);
@@ -22,7 +21,7 @@ function ProductsList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [filter, setFilter] = useState("");
-  const [anchorEl, setAnchorEl] = useState(null); // For the sort menu
+  const [anchorEl, setAnchorEl] = useState(null);
   const [sortOptions, setSortOptions] = useState({
     price: false,
     name: false,
@@ -32,12 +31,11 @@ function ProductsList() {
     const loadProducts = async () => {
       try {
         const data = await fetchProducts();
-        console.log("Fetched products:", data); // Log the fetched products
         if (!data || data.length === 0) {
           throw new Error("No products found");
         }
         setProducts(data);
-        setFilteredProducts(data); // Initialize filtered products
+        setFilteredProducts(data);
         setLoading(false);
       } catch (err) {
         setError(err);
@@ -46,9 +44,8 @@ function ProductsList() {
     };
 
     loadProducts();
-  }, []); // Empty dependency array ensures this runs only once when the component mounts
+  }, []);
 
-  // Handle filter input change
   const handleFilterChange = (event) => {
     const value = event.target.value.toLowerCase();
     setFilter(value);
@@ -59,7 +56,6 @@ function ProductsList() {
     );
   };
 
-  // Handle sort menu open/close
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -68,7 +64,6 @@ function ProductsList() {
     setAnchorEl(null);
   };
 
-  // Handle sort option change
   const handleSortChange = (option) => {
     setSortOptions((prev) => ({
       ...prev,
@@ -76,7 +71,6 @@ function ProductsList() {
     }));
   };
 
-  // Clear all sort options
   const clearSort = () => {
     setSortOptions({
       price: false,
@@ -85,20 +79,19 @@ function ProductsList() {
     setAnchorEl(null);
   };
 
-  // Add this function to apply the sort options
   const applySort = () => {
     let sortedProducts = [...filteredProducts];
 
     if (sortOptions.price) {
-      sortedProducts.sort((a, b) => a.price - b.price); // Sort by price (ascending)
+      sortedProducts.sort((a, b) => a.price - b.price);
     }
 
     if (sortOptions.name) {
-      sortedProducts.sort((a, b) => a.name.localeCompare(b.name)); // Sort by name (alphabetical)
+      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
     }
 
     setFilteredProducts(sortedProducts);
-    setAnchorEl(null); // Close the menu after applying the sort
+    setAnchorEl(null);
   };
 
   if (loading) {
@@ -122,7 +115,6 @@ function ProductsList() {
       <Typography variant="h4" gutterBottom>
         All Products
       </Typography>
-      {/* Filter Bar with Sort Button */}
       <Box sx={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
         <TextField
           label="Filter by name"
@@ -184,51 +176,10 @@ function ProductsList() {
           </MenuItem>
         </Menu>
       </Box>
-      {/* Product List */}
       {filteredProducts.length > 0 ? (
         <List>
           {filteredProducts.map((product) => (
-            <ListItem
-              key={product.id}
-              sx={{
-                borderBottom: "1px solid #ccc",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <ListItemText
-                primary={
-                  <>
-                    <Typography variant="h6">{product.name}</Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      {product.description} {/* Add description here */}
-                    </Typography>
-                  </>
-                }
-                sx={{ flex: 1 }} // Ensures text takes up available space
-              />
-              <Typography
-                variant="body1"
-                sx={{
-                  marginRight: "16px",
-                  fontWeight: "bold",
-                }}
-              >
-                ${product.price} {/* Price to the left of the image */}
-              </Typography>
-              {/* Product Image */}
-              <Box
-                component="img"
-                src={`/Products/${product.imageUrl}`} // Prepend the base URL to the image path
-                alt={product.name}
-                sx={{
-                  width: 80,
-                  height: 80,
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-            </ListItem>
+            <ProductItem key={product.id} product={product} />
           ))}
         </List>
       ) : (
