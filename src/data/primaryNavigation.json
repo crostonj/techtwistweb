@@ -9,7 +9,7 @@
       },
       {
         "label": "Barcode Scanners",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Receipt Printers",
@@ -17,7 +17,7 @@
       },
       {
         "label": "Cash Drawers",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Credit Card Readers",
@@ -25,7 +25,7 @@
       },
       {
         "label": "Inventory Management Software",
-        "path": "/products/detail"
+        "path": "/products"
       }
     ]
   },
@@ -39,7 +39,7 @@
       },
       {
         "label": "Kitchen Display Systems",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Order Management Tablets",
@@ -47,7 +47,7 @@
       },
       {
         "label": "Payment Processing",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Menu Management Software",
@@ -55,7 +55,7 @@
       },
       {
         "label": "Mobile Ordering Apps",
-        "path": "/products/detail"
+        "path": "/products"
       }
     ]
   },
@@ -69,7 +69,7 @@
       },
       {
         "label": "Client Management Systems",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Payment Processing Terminals",
@@ -77,7 +77,7 @@
       },
       {
         "label": "Digital Booking Platforms",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Service Management Apps",
@@ -85,7 +85,7 @@
       },
       {
         "label": "Customer Communication Tools",
-        "path": "/products/detail"
+        "path": "/products"
       }
     ]
   },
@@ -99,7 +99,7 @@
       },
       {
         "label": "Electronic Health Records",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Patient Check-in Kiosks",
@@ -107,7 +107,7 @@
       },
       {
         "label": "Telehealth Platforms",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Billing and Insurance Software",
@@ -115,7 +115,7 @@
       },
       {
         "label": "Wellness Tracking Apps",
-        "path": "/products/detail"
+        "path": "/products"
       }
     ]
   },
@@ -129,7 +129,7 @@
       },
       {
         "label": "Online Booking Platforms",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Property Management Software",
@@ -137,7 +137,7 @@
       },
       {
         "label": "Guest Check-in Tablets",
-        "path": "/products/detail"
+        "path": "/products"
       },
       {
         "label": "Revenue Management Tools",
@@ -145,7 +145,7 @@
       },
       {
         "label": "Customer Experience Apps",
-        "path": "/products/detail"
+        "path": "/products"
       }
     ]
   },
@@ -159,7 +159,7 @@
       },
       {
         "label": "Account Info",
-        "path": "/products/detail"
+        "path": "/products"
       }
     ]
   }

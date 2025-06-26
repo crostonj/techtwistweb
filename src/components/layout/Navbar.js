@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -9,19 +9,41 @@ import {
   IconButton,
 } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { useNavigation } from "../../context/NavigationContext";
 import navigationData from "../../data/primaryNavigation.json";
 
 function Navbar() {
   const [menuData, setMenuData] = useState([]);
   const [secondaryMenu, setSecondaryMenu] = useState([]);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { 
+    setIndustryFromPath, 
+    setProductAreaFromLabel, 
+    clearSelections,
+    setIndustryName 
+  } = useNavigation();
 
   useEffect(() => {
     // Load navigation data dynamically
     setMenuData(navigationData);
   }, []);
 
-  const handlePrimaryNavClick = (submenu) => {
+  // Update industry selection when location changes
+  useEffect(() => {
+    setIndustryFromPath(location.pathname);
+  }, [location.pathname, setIndustryFromPath]);
+
+  const handlePrimaryNavClick = (submenu, industryName, path) => {
     setSecondaryMenu(submenu || []);
+    setIndustryFromPath(path);
+    setIndustryName(industryName);
+  };
+
+  const handleSecondaryNavClick = (label) => {
+    setProductAreaFromLabel(label);
+    // Force navigation to products page to ensure we're in list view, not detail view
+    navigate('/products');
   };
 
   return (
@@ -37,7 +59,7 @@ function Navbar() {
                   color="inherit"
                   component={Link}
                   to={item.path}
-                  onClick={() => handlePrimaryNavClick(item.submenu)}
+                  onClick={() => handlePrimaryNavClick(item.submenu, item.label, item.path)}
                 >
                   {item.label}
                 </Button>
@@ -71,6 +93,7 @@ function Navbar() {
                 color="inherit"
                 component={Link}
                 to={subItem.path}
+                onClick={() => handleSecondaryNavClick(subItem.label)}
               >
                 {subItem.label}
               </Button>

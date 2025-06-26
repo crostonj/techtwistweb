@@ -1,0 +1,2427 @@
+{
+  "retail": {
+    "name": "Retail",
+    "productAreas": {
+      "pos_systems": {
+        "name": "Retail POS Systems",
+        "products": [
+          {
+            "id": "ret_pos_001",
+            "name": "TouchPoint Pro Retail POS",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "All-in-one retail POS system with integrated payment processing, inventory management, and customer loyalty features. Perfect for small to medium retail stores.",
+            "imageUrl": "ttp1.png",
+            "features": ["Touch screen interface", "Cloud-based", "Multi-location support", "Real-time reporting"],
+            "specifications": {
+              "screen": "15.6 inch touchscreen",
+              "processor": "Intel i5",
+              "memory": "8GB RAM",
+              "storage": "256GB SSD"
+            }
+          },
+          {
+            "id": "ret_pos_002",
+            "name": "RetailMax Enterprise POS",
+            "brand": "TechTwist",
+            "price": 1499.99,
+            "description": "Enterprise-grade POS solution designed for large retail chains with advanced analytics and multi-store management capabilities.",
+            "imageUrl": "ttp2.png",
+            "features": ["Multi-store management", "Advanced analytics", "Employee management", "Custom reporting"],
+            "specifications": {
+              "screen": "21.5 inch touchscreen",
+              "processor": "Intel i7",
+              "memory": "16GB RAM",
+              "storage": "512GB SSD"
+            }
+          },
+          {
+            "id": "ret_pos_003",
+            "name": "QuickSale Compact POS",
+            "brand": "TechTwist",
+            "price": 599.99,
+            "description": "Compact and affordable POS system ideal for small boutiques and pop-up stores with essential retail features.",
+            "imageUrl": "ttp3.png",
+            "features": ["Compact design", "Easy setup", "Basic inventory", "Card processing"],
+            "specifications": {
+              "screen": "11.6 inch touchscreen",
+              "processor": "ARM Cortex-A72",
+              "memory": "4GB RAM",
+              "storage": "128GB eMMC"
+            }
+          },
+          {
+            "id": "ret_pos_004",
+            "name": "FlexiRetail Mobile POS",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Mobile POS solution with tablet and wireless payment processing for flexible retail operations.",
+            "imageUrl": "ttp4.png",
+            "features": ["Wireless operation", "Tablet-based", "Mobile payments", "Cloud sync"],
+            "specifications": {
+              "screen": "10.1 inch tablet",
+              "connectivity": "WiFi, 4G LTE",
+              "battery": "8 hours",
+              "weight": "1.2 lbs"
+            }
+          },
+          {
+            "id": "ret_pos_005",
+            "name": "RetailStation Pro All-in-One",
+            "brand": "TechTwist",
+            "price": 1299.99,
+            "description": "Professional all-in-one retail workstation with integrated printer, scanner, and customer display.",
+            "imageUrl": "ttp5.png",
+            "features": ["All-in-one design", "Integrated peripherals", "Customer display", "Professional grade"],
+            "specifications": {
+              "screen": "15.6 inch main + 7 inch customer",
+              "printer": "Thermal receipt printer",
+              "scanner": "2D barcode scanner",
+              "cash_drawer": "Heavy-duty drawer"
+            }
+          }
+        ]
+      },
+      "barcode_scanners": {
+        "name": "Barcode Scanners",
+        "products": [
+          {
+            "id": "ret_scan_001",
+            "name": "ScanMaster 2D Pro",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "High-performance 2D barcode scanner with omnidirectional scanning and wireless connectivity for retail environments.",
+            "imageUrl": "ttp6.png",
+            "features": ["2D barcode scanning", "Wireless connectivity", "Drop resistant", "Long battery life"],
+            "specifications": {
+              "scanType": "2D/QR codes",
+              "connectivity": "Bluetooth 5.0",
+              "battery": "2200mAh",
+              "range": "100 meters"
+            }
+          },
+          {
+            "id": "ret_scan_002",
+            "name": "QuickScan Handheld",
+            "brand": "TechTwist",
+            "price": 89.99,
+            "description": "Ergonomic handheld scanner with fast 1D barcode reading and USB connectivity.",
+            "imageUrl": "ttp7.png",
+            "features": ["1D barcode scanning", "USB connectivity", "Ergonomic design", "Auto-trigger"],
+            "specifications": {
+              "scanType": "1D linear barcodes",
+              "connectivity": "USB 2.0",
+              "scan_rate": "300 scans/sec",
+              "cable": "6 foot coiled"
+            }
+          },
+          {
+            "id": "ret_scan_003",
+            "name": "PocketScan Mobile",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Compact wireless scanner perfect for inventory management and mobile retail operations.",
+            "imageUrl": "ttp8.png",
+            "features": ["Compact size", "Wireless operation", "Memory storage", "Easy pairing"],
+            "specifications": {
+              "scanType": "1D/2D barcodes",
+              "connectivity": "Bluetooth/USB",
+              "memory": "100,000 scans",
+              "weight": "3.5 oz"
+            }
+          },
+          {
+            "id": "ret_scan_004",
+            "name": "CounterTop Auto Scanner",
+            "brand": "TechTwist",
+            "price": 179.99,
+            "description": "Hands-free presentation scanner ideal for high-volume checkout operations.",
+            "imageUrl": "ttp9.png",
+            "features": ["Hands-free scanning", "Auto-trigger", "High volume", "Compact base"],
+            "specifications": {
+              "scanType": "1D/2D omnidirectional",
+              "trigger": "Automatic presentation",
+              "interface": "USB/RS232",
+              "scan_area": "4 x 4 inches"
+            }
+          },
+          {
+            "id": "ret_scan_005",
+            "name": "Industrial Rugged Scanner",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Heavy-duty industrial scanner designed for warehouse and harsh retail environments.",
+            "imageUrl": "ttp10.png",
+            "features": ["Rugged design", "IP65 rated", "Extended range", "Industrial grade"],
+            "specifications": {
+              "scanType": "1D/2D barcodes",
+              "protection": "IP65 dust/water",
+              "drop_spec": "6 feet to concrete",
+              "range": "24 inches"
+            }
+          }
+        ]
+      },
+      "receipt_printers": {
+        "name": "Receipt Printers",
+        "products": [
+          {
+            "id": "ret_print_001",
+            "name": "PrintFast Thermal Receipt Printer",
+            "brand": "TechTwist",
+            "price": 189.99,
+            "description": "High-speed thermal receipt printer with auto-cutter and multiple connectivity options for busy retail environments.",
+            "imageUrl": "ttp11.png",
+            "features": ["Auto-cutter", "High-speed printing", "Multiple connectivity", "Compact design"],
+            "specifications": {
+              "printSpeed": "300mm/sec",
+              "connectivity": "USB, Ethernet, WiFi",
+              "paperWidth": "80mm",
+              "autocut": "Yes"
+            }
+          },
+          {
+            "id": "ret_print_002",
+            "name": "EcoPrint Green Thermal",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "Energy-efficient thermal printer with eco-friendly design and quiet operation.",
+            "imageUrl": "ttp12.png",
+            "features": ["Energy efficient", "Quiet operation", "Eco-friendly", "ENERGY STAR"],
+            "specifications": {
+              "printSpeed": "200mm/sec",
+              "power": "Low power consumption",
+              "noise": "45dB quiet",
+              "certification": "ENERGY STAR"
+            }
+          },
+          {
+            "id": "ret_print_003",
+            "name": "MobilePrint Portable",
+            "brand": "TechTwist",
+            "price": 229.99,
+            "description": "Portable receipt printer with rechargeable battery for mobile point-of-sale operations.",
+            "imageUrl": "ttp1.png",
+            "features": ["Portable design", "Rechargeable battery", "Wireless printing", "Lightweight"],
+            "specifications": {
+              "printSpeed": "100mm/sec",
+              "battery": "8 hours continuous",
+              "connectivity": "Bluetooth/WiFi",
+              "weight": "1.8 lbs"
+            }
+          },
+          {
+            "id": "ret_print_004",
+            "name": "ProPrint Dual Receipt",
+            "brand": "TechTwist",
+            "price": 279.99,
+            "description": "Dual-receipt printer for customer and merchant copies with advanced paper handling.",
+            "imageUrl": "ttp2.png",
+            "features": ["Dual receipt printing", "Advanced paper handling", "Fast switching", "Professional grade"],
+            "specifications": {
+              "printSpeed": "250mm/sec each",
+              "paperRolls": "2 x 80mm rolls",
+              "switching": "Automatic",
+              "buffer": "4MB print buffer"
+            }
+          },
+          {
+            "id": "ret_print_005",
+            "name": "CompactPrint Mini",
+            "brand": "TechTwist",
+            "price": 119.99,
+            "description": "Ultra-compact receipt printer perfect for small counters and limited space installations.",
+            "imageUrl": "ttp3.png",
+            "features": ["Ultra-compact", "Space-saving", "Easy installation", "Affordable"],
+            "specifications": {
+              "printSpeed": "150mm/sec",
+              "dimensions": "5.5 x 3.8 x 2.8 in",
+              "paperWidth": "58mm",
+              "connectivity": "USB"
+            }
+          }
+        ]
+      },
+      "cash_drawers": {
+        "name": "Cash Drawers",
+        "products": [
+          {
+            "id": "ret_cash_001",
+            "name": "SecureCash Heavy Duty Drawer",
+            "brand": "TechTwist",
+            "price": 179.99,
+            "description": "Heavy-duty cash drawer with 5-bill and 8-coin compartments, key lock, and printer-driven opening.",
+            "imageUrl": "ttp4.png",
+            "features": ["Heavy-duty construction", "5 bill/8 coin slots", "Key lock security", "Printer driven"],
+            "specifications": {
+              "dimensions": "16 x 16 x 4 inches",
+              "compartments": "5 bill, 8 coin",
+              "lock": "Key lock + solenoid",
+              "connectivity": "Printer driven"
+            }
+          },
+          {
+            "id": "ret_cash_002",
+            "name": "CompactCash Mini Drawer",
+            "brand": "TechTwist",
+            "price": 129.99,
+            "description": "Compact cash drawer perfect for small retail environments with 4-bill and 5-coin compartments.",
+            "imageUrl": "ttp5.png",
+            "features": ["Compact design", "4 bill/5 coin slots", "Manual key opening", "Space-saving"],
+            "specifications": {
+              "dimensions": "13 x 13 x 3 inches",
+              "compartments": "4 bill, 5 coin",
+              "lock": "Manual key lock",
+              "weight": "8 lbs"
+            }
+          },
+          {
+            "id": "ret_cash_003",
+            "name": "SmartCash Electronic Drawer",
+            "brand": "TechTwist",
+            "price": 249.99,
+            "description": "Electronic cash drawer with USB connectivity, customizable compartments, and automatic opening.",
+            "imageUrl": "ttp6.png",
+            "features": ["USB connectivity", "Electronic opening", "Customizable compartments", "LED indicators"],
+            "specifications": {
+              "dimensions": "17 x 17 x 4.5 inches",
+              "compartments": "Adjustable inserts",
+              "connectivity": "USB direct",
+              "features": "LED status lights"
+            }
+          },
+          {
+            "id": "ret_cash_004",
+            "name": "FlipTop Easy Access Drawer",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Flip-top cash drawer with easy access design and dual-zone compartment layout for efficient cash handling.",
+            "imageUrl": "ttp7.png",
+            "features": ["Flip-top design", "Easy access", "Dual-zone layout", "Smooth operation"],
+            "specifications": {
+              "dimensions": "15 x 15 x 3.5 inches",
+              "compartments": "Dual-zone design",
+              "operation": "Smooth sliding",
+              "durability": "100,000+ cycles"
+            }
+          },
+          {
+            "id": "ret_cash_005",
+            "name": "PremiumCash Stainless Steel",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Premium stainless steel cash drawer with anti-theft features and commercial-grade construction.",
+            "imageUrl": "ttp8.png",
+            "features": ["Stainless steel", "Anti-theft features", "Commercial grade", "Lifetime warranty"],
+            "specifications": {
+              "material": "Stainless steel",
+              "dimensions": "18 x 18 x 5 inches",
+              "security": "Multi-point locking",
+              "warranty": "Lifetime warranty"
+            }
+          }
+        ]
+      },
+      "credit_card_readers": {
+        "name": "Credit Card Readers",
+        "products": [
+          {
+            "id": "ret_card_001",
+            "name": "SwipePay EMV Terminal",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "EMV-certified credit card terminal with chip, swipe, and contactless payment processing capabilities.",
+            "imageUrl": "ttp9.png",
+            "features": ["EMV chip reading", "Contactless payments", "Swipe capability", "PCI compliant"],
+            "specifications": {
+              "payments": "EMV, NFC, magnetic stripe",
+              "connectivity": "USB, Ethernet",
+              "certification": "PCI PTS certified",
+              "display": "Backlit LCD"
+            }
+          },
+          {
+            "id": "ret_card_002",
+            "name": "TapPay Contactless Reader",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "Dedicated contactless payment reader supporting Apple Pay, Google Pay, and tap-to-pay cards.",
+            "imageUrl": "ttp10.png",
+            "features": ["Contactless only", "Apple/Google Pay", "Fast processing", "Compact design"],
+            "specifications": {
+              "payments": "NFC contactless only",
+              "compatibility": "Apple Pay, Google Pay",
+              "speed": "Sub-second processing",
+              "dimensions": "3 x 3 x 1 inches"
+            }
+          },
+          {
+            "id": "ret_card_003",
+            "name": "MobilePay Bluetooth Reader",
+            "brand": "TechTwist",
+            "price": 89.99,
+            "description": "Portable Bluetooth card reader for mobile point-of-sale operations with all payment types.",
+            "imageUrl": "ttp11.png",
+            "features": ["Bluetooth connectivity", "All payment types", "Portable design", "Long battery"],
+            "specifications": {
+              "connectivity": "Bluetooth 5.0",
+              "payments": "All major types",
+              "battery": "8 hours continuous",
+              "range": "30 feet"
+            }
+          },
+          {
+            "id": "ret_card_004",
+            "name": "CounterTop Integrated Reader",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Integrated countertop payment terminal with built-in printer and customer display for complete transactions.",
+            "imageUrl": "ttp12.png",
+            "features": ["Integrated printer", "Customer display", "All-in-one design", "Professional grade"],
+            "specifications": {
+              "printer": "Thermal receipt printer",
+              "display": "Customer-facing LCD",
+              "connectivity": "Ethernet, WiFi",
+              "certification": "EMV Level 1&2"
+            }
+          },
+          {
+            "id": "ret_card_005",
+            "name": "MultiPay Universal Terminal",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Universal payment terminal supporting all payment methods including cryptocurrency and digital wallets.",
+            "imageUrl": "ttp1.png",
+            "features": ["Universal payments", "Cryptocurrency support", "Digital wallets", "Future-ready"],
+            "specifications": {
+              "payments": "All traditional + crypto",
+              "wallets": "50+ digital wallets",
+              "updates": "Over-the-air updates",
+              "future": "Blockchain ready"
+            }
+          }
+        ]
+      },
+      "inventory_management": {
+        "name": "Inventory Management Software",
+        "products": [
+          {
+            "id": "ret_inv_001",
+            "name": "StockMaster Pro Inventory",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Comprehensive inventory management software with real-time tracking, automated reordering, and analytics.",
+            "imageUrl": "ttp2.png",
+            "features": ["Real-time tracking", "Auto reordering", "Analytics dashboard", "Multi-location"],
+            "specifications": {
+              "tracking": "Real-time stock levels",
+              "automation": "Smart reorder points",
+              "reporting": "Advanced analytics",
+              "locations": "Unlimited locations"
+            }
+          },
+          {
+            "id": "ret_inv_002",
+            "name": "QuickStock Basic Inventory",
+            "brand": "TechTwist",
+            "price": 99.99,
+            "description": "Simple inventory management solution for small retailers with barcode scanning and basic reporting.",
+            "imageUrl": "ttp3.png",
+            "features": ["Barcode scanning", "Basic reporting", "Easy setup", "Affordable"],
+            "specifications": {
+              "scanning": "Barcode integration",
+              "reports": "Essential reports",
+              "setup": "Quick 30-min setup",
+              "users": "Up to 3 users"
+            }
+          },
+          {
+            "id": "ret_inv_003",
+            "name": "CloudStock Enterprise",
+            "brand": "TechTwist",
+            "price": 599.99,
+            "description": "Enterprise cloud-based inventory system with advanced forecasting and supply chain integration.",
+            "imageUrl": "ttp4.png",
+            "features": ["Cloud-based", "Demand forecasting", "Supply chain integration", "Scalable"],
+            "specifications": {
+              "deployment": "Cloud SaaS",
+              "forecasting": "AI-powered predictions",
+              "integration": "EDI/API connections",
+              "scalability": "Unlimited growth"
+            }
+          },
+          {
+            "id": "ret_inv_004",
+            "name": "MobileStock Warehouse",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Mobile-first inventory management with handheld scanner integration and warehouse optimization.",
+            "imageUrl": "ttp5.png",
+            "features": ["Mobile-first design", "Handheld integration", "Warehouse optimization", "Offline capable"],
+            "specifications": {
+              "mobile": "iOS/Android apps",
+              "scanners": "Handheld scanner sync",
+              "optimization": "Pick path optimization",
+              "offline": "Offline operation mode"
+            }
+          },
+          {
+            "id": "ret_inv_005",
+            "name": "SmartStock AI Inventory",
+            "brand": "TechTwist",
+            "price": 799.99,
+            "description": "AI-powered inventory management with predictive analytics and automated decision making.",
+            "imageUrl": "ttp6.png",
+            "features": ["AI-powered", "Predictive analytics", "Auto decisions", "Machine learning"],
+            "specifications": {
+              "ai": "Machine learning algorithms",
+              "predictions": "Seasonal/trend analysis",
+              "automation": "Intelligent automation",
+              "learning": "Continuous improvement"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "foodBeverage": {
+    "name": "Food & Beverage",
+    "productAreas": {
+      "restaurant_pos": {
+        "name": "Restaurant POS Terminals",
+        "products": [
+          {
+            "id": "fb_pos_001",
+            "name": "RestaurantPro Touch POS",
+            "brand": "TechTwist",
+            "price": 1199.99,
+            "description": "Specialized restaurant POS with table management, kitchen integration, and split billing capabilities.",
+            "imageUrl": "ttp5.png",
+            "features": ["Table management", "Kitchen display integration", "Split billing", "Menu customization"],
+            "specifications": {
+              "screen": "15.6 inch touchscreen",
+              "processor": "Intel i5",
+              "memory": "8GB RAM",
+              "os": "Restaurant OS"
+            }
+          },
+          {
+            "id": "fb_pos_002",
+            "name": "QuickService Counter POS",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "Fast-service POS system optimized for quick-service restaurants and cafes with rapid order processing.",
+            "imageUrl": "ttp6.png",
+            "features": ["Quick order entry", "Combo meal builder", "Fast payment", "Drive-thru ready"],
+            "specifications": {
+              "screen": "12.1 inch touchscreen",
+              "processor": "Intel i3",
+              "memory": "4GB RAM",
+              "storage": "128GB SSD"
+            }
+          },
+          {
+            "id": "fb_pos_003",
+            "name": "FineDining Elegant POS",
+            "brand": "TechTwist",
+            "price": 1599.99,
+            "description": "Premium POS system designed for upscale restaurants with wine pairing, course timing, and guest preferences.",
+            "imageUrl": "ttp7.png",
+            "features": ["Wine pairing", "Course timing", "Guest preferences", "Elegant interface"],
+            "specifications": {
+              "screen": "17 inch touchscreen",
+              "processor": "Intel i7",
+              "memory": "16GB RAM",
+              "wine_database": "50,000+ wines"
+            }
+          },
+          {
+            "id": "fb_pos_004",
+            "name": "MobileBite Tablet POS",
+            "brand": "TechTwist",
+            "price": 599.99,
+            "description": "Tablet-based mobile POS for tableside ordering and payment processing in restaurants.",
+            "imageUrl": "ttp8.png",
+            "features": ["Tableside ordering", "Mobile payments", "Order tracking", "Server mobility"],
+            "specifications": {
+              "screen": "10.1 inch tablet",
+              "battery": "12 hours",
+              "connectivity": "WiFi, 4G",
+              "weight": "1.5 lbs"
+            }
+          },
+          {
+            "id": "fb_pos_005",
+            "name": "CloudKitchen Smart POS",
+            "brand": "TechTwist",
+            "price": 799.99,
+            "description": "Cloud-based POS solution for delivery kitchens and virtual restaurants with multi-brand support.",
+            "imageUrl": "ttp9.png",
+            "features": ["Multi-brand support", "Delivery integration", "Cloud-based", "Virtual restaurant ready"],
+            "specifications": {
+              "deployment": "Cloud-native",
+              "integrations": "Major delivery platforms",
+              "brands": "Unlimited virtual brands",
+              "analytics": "Real-time dashboard"
+            }
+          }
+        ]
+      },
+      "kitchen_display": {
+        "name": "Kitchen Display Systems",
+        "products": [
+          {
+            "id": "fb_kds_001",
+            "name": "KitchenView Pro Display",
+            "brand": "TechTwist",
+            "price": 799.99,
+            "description": "Digital kitchen display system that streamlines order management and reduces ticket printing costs.",
+            "imageUrl": "ttp10.png",
+            "features": ["Order timing", "Priority alerts", "Multi-station support", "Easy cleaning"],
+            "specifications": {
+              "screen": "21.5 inch LCD",
+              "resolution": "1920x1080",
+              "brightness": "500 nits",
+              "rating": "IP65 water resistant"
+            }
+          },
+          {
+            "id": "fb_kds_002",
+            "name": "ExpediteMax Order Screen",
+            "brand": "TechTwist",
+            "price": 699.99,
+            "description": "Expediting station display with order tracking and completion management for busy kitchens.",
+            "imageUrl": "ttp11.png",
+            "features": ["Order expediting", "Completion tracking", "Color coding", "Timer alerts"],
+            "specifications": {
+              "screen": "19 inch touchscreen",
+              "mount": "Adjustable arm",
+              "interface": "Capacitive touch",
+              "alerts": "Audio/visual"
+            }
+          },
+          {
+            "id": "fb_kds_003",
+            "name": "CompactKDS Counter Display",
+            "brand": "TechTwist",
+            "price": 449.99,
+            "description": "Space-saving kitchen display perfect for small kitchens and food trucks.",
+            "imageUrl": "ttp12.png",
+            "features": ["Compact design", "Counter-top mount", "Easy installation", "Budget-friendly"],
+            "specifications": {
+              "screen": "15.6 inch LCD",
+              "mounting": "Counter stand",
+              "power": "12V DC option",
+              "dimensions": "14 x 9 x 2 inches"
+            }
+          },
+          {
+            "id": "fb_kds_004",
+            "name": "MultiStation Kitchen Hub",
+            "brand": "TechTwist",
+            "price": 1299.99,
+            "description": "Multi-screen kitchen display system supporting multiple cooking stations and preparation areas.",
+            "imageUrl": "ttp1.png",
+            "features": ["Multi-screen support", "Station assignment", "Workflow optimization", "Manager dashboard"],
+            "specifications": {
+              "screens": "Up to 8 displays",
+              "stations": "Configurable assignments",
+              "network": "Ethernet backbone",
+              "management": "Central control unit"
+            }
+          },
+          {
+            "id": "fb_kds_005",
+            "name": "OutdoorKDS Weather Display",
+            "brand": "TechTwist",
+            "price": 999.99,
+            "description": "Weather-resistant kitchen display designed for outdoor cooking areas and food trucks.",
+            "imageUrl": "ttp2.png",
+            "features": ["Weather resistant", "High brightness", "Outdoor rated", "Anti-glare"],
+            "specifications": {
+              "screen": "21.5 inch outdoor LCD",
+              "brightness": "1000 nits",
+              "rating": "IP66 weatherproof",
+              "temperature": "-20°C to +70°C"
+            }
+          }
+        ]
+      },
+      "order_tablets": {
+        "name": "Order Management Tablets",
+        "products": [
+          {
+            "id": "fb_tab_001",
+            "name": "ServerPad Mobile Tablet",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Rugged tablet designed for waitstaff with spill-resistant design and long battery life.",
+            "imageUrl": "ttp3.png",
+            "features": ["Spill resistant", "Drop protection", "Long battery", "Easy ordering"],
+            "specifications": {
+              "screen": "10.1 inch",
+              "battery": "12 hours",
+              "protection": "IP67 rated",
+              "weight": "650g"
+            }
+          },
+          {
+            "id": "fb_tab_002",
+            "name": "TableTop Order Station",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Fixed tablet solution for table-mounted self-ordering in casual dining restaurants.",
+            "imageUrl": "ttp4.png",
+            "features": ["Table mounting", "Self-ordering", "Payment ready", "Tamper resistant"],
+            "specifications": {
+              "screen": "10.1 inch IPS",
+              "mounting": "Secure table dock",
+              "payment": "NFC/chip reader",
+              "security": "Anti-theft design"
+            }
+          },
+          {
+            "id": "fb_tab_003",
+            "name": "KitchenCommand Tablet",
+            "brand": "TechTwist",
+            "price": 349.99,
+            "description": "Kitchen-specific tablet for order management and communication with front-of-house staff.",
+            "imageUrl": "ttp5.png",
+            "features": ["Kitchen optimized", "Heat resistant", "Easy cleaning", "Staff communication"],
+            "specifications": {
+              "screen": "8 inch ruggedized",
+              "temperature": "Operating to 60°C",
+              "cleaning": "Antimicrobial coating",
+              "mount": "Magnetic back"
+            }
+          },
+          {
+            "id": "fb_tab_004",
+            "name": "DriveThru Command Center",
+            "brand": "TechTwist",
+            "price": 449.99,
+            "description": "Drive-thru optimized tablet with headset integration and order confirmation features.",
+            "imageUrl": "ttp6.png",
+            "features": ["Drive-thru optimized", "Headset integration", "Order confirmation", "Fast processing"],
+            "specifications": {
+              "screen": "8 inch bright display",
+              "audio": "Headset jack",
+              "mount": "Adjustable arm",
+              "visibility": "High contrast mode"
+            }
+          },
+          {
+            "id": "fb_tab_005",
+            "name": "FlexiOrder Convertible",
+            "brand": "TechTwist",
+            "price": 499.99,
+            "description": "2-in-1 convertible tablet that works as both handheld and laptop for versatile restaurant operations.",
+            "imageUrl": "ttp7.png",
+            "features": ["2-in-1 design", "Detachable keyboard", "Versatile use", "Full functionality"],
+            "specifications": {
+              "screen": "11.6 inch detachable",
+              "keyboard": "Magnetic attachment",
+              "modes": "Tablet/laptop",
+              "battery": "10 hours combined"
+            }
+          }
+        ]
+      },
+      "payment_processing": {
+        "name": "Payment Processing",
+        "products": [
+          {
+            "id": "fb_pay_001",
+            "name": "RestaurantPay Gateway",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Specialized payment gateway for restaurants with tip processing, split billing, and integrated reporting.",
+            "imageUrl": "ttp8.png",
+            "features": ["Tip processing", "Split billing", "Integrated reporting", "Multi-tender"],
+            "specifications": {
+              "tips": "Automatic tip calculation",
+              "splitting": "Flexible bill splitting",
+              "reporting": "Daily settlement reports",
+              "tenders": "Cash, card, mobile"
+            }
+          },
+          {
+            "id": "fb_pay_002",
+            "name": "QuickPay Express Terminal",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Fast payment terminal optimized for quick-service restaurants with contactless payment support.",
+            "imageUrl": "ttp9.png",
+            "features": ["Contactless payments", "Fast processing", "QSR optimized", "Low fees"],
+            "specifications": {
+              "speed": "Sub-2 second processing",
+              "contactless": "NFC/tap-to-pay",
+              "optimization": "QSR workflow",
+              "fees": "Competitive rates"
+            }
+          },
+          {
+            "id": "fb_pay_003",
+            "name": "TablePay Wireless Terminal",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Portable wireless payment terminal for tableside payments in full-service restaurants.",
+            "imageUrl": "ttp10.png",
+            "features": ["Tableside payments", "Wireless operation", "Long battery life", "Secure processing"],
+            "specifications": {
+              "wireless": "WiFi connectivity",
+              "battery": "8 hours continuous",
+              "security": "End-to-end encryption",
+              "range": "200 feet"
+            }
+          },
+          {
+            "id": "fb_pay_004",
+            "name": "DeliveryPay Integration Hub",
+            "brand": "TechTwist",
+            "price": 249.99,
+            "description": "Payment integration hub that connects with major delivery platforms and online ordering systems.",
+            "imageUrl": "ttp11.png",
+            "features": ["Delivery integration", "Online ordering sync", "Multi-platform", "Automated reconciliation"],
+            "specifications": {
+              "platforms": "All major delivery apps",
+              "sync": "Real-time order sync",
+              "reconciliation": "Automated daily",
+              "reporting": "Unified reporting"
+            }
+          },
+          {
+            "id": "fb_pay_005",
+            "name": "CloudPay Universal Processor",
+            "brand": "TechTwist",
+            "price": 349.99,
+            "description": "Cloud-based payment processor supporting all payment types including cryptocurrency and digital wallets.",
+            "imageUrl": "ttp12.png",
+            "features": ["Universal payment types", "Cryptocurrency support", "Cloud-based", "Real-time analytics"],
+            "specifications": {
+              "types": "Traditional + digital + crypto",
+              "crypto": "Bitcoin, Ethereum support",
+              "deployment": "Cloud infrastructure",
+              "analytics": "Real-time dashboard"
+            }
+          }
+        ]
+      },
+      "menu_management": {
+        "name": "Menu Management Software",
+        "products": [
+          {
+            "id": "fb_menu_001",
+            "name": "MenuMaster Pro System",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Comprehensive menu management system with recipe costing, nutrition tracking, and seasonal planning.",
+            "imageUrl": "ttp1.png",
+            "features": ["Recipe costing", "Nutrition tracking", "Seasonal planning", "Allergen management"],
+            "specifications": {
+              "recipes": "Unlimited recipes",
+              "costing": "Real-time cost analysis",
+              "nutrition": "FDA compliant",
+              "allergens": "Full allergen database"
+            }
+          },
+          {
+            "id": "fb_menu_002",
+            "name": "QuickMenu Builder",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "Easy menu creation tool with drag-and-drop interface and automatic price optimization suggestions.",
+            "imageUrl": "ttp2.png",
+            "features": ["Drag-and-drop builder", "Price optimization", "Template library", "Quick updates"],
+            "specifications": {
+              "interface": "Visual drag-and-drop",
+              "optimization": "AI price suggestions",
+              "templates": "50+ menu templates",
+              "updates": "Instant menu changes"
+            }
+          },
+          {
+            "id": "fb_menu_003",
+            "name": "DigitalMenu Display Manager",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Digital menu board management system with remote updates and dynamic pricing capabilities.",
+            "imageUrl": "ttp3.png",
+            "features": ["Digital menu boards", "Remote updates", "Dynamic pricing", "Scheduling"],
+            "specifications": {
+              "displays": "Unlimited menu boards",
+              "updates": "Remote content management",
+              "pricing": "Time-based pricing",
+              "scheduling": "Content scheduling"
+            }
+          },
+          {
+            "id": "fb_menu_004",
+            "name": "SeasonalMenu Planner",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Seasonal menu planning tool with ingredient availability tracking and supplier integration.",
+            "imageUrl": "ttp4.png",
+            "features": ["Seasonal planning", "Ingredient tracking", "Supplier integration", "Cost forecasting"],
+            "specifications": {
+              "planning": "12-month calendar",
+              "tracking": "Real-time availability",
+              "suppliers": "Vendor management",
+              "forecasting": "Cost prediction"
+            }
+          },
+          {
+            "id": "fb_menu_005",
+            "name": "SmartMenu Analytics",
+            "brand": "TechTwist",
+            "price": 249.99,
+            "description": "Menu analytics platform that tracks item performance and provides optimization recommendations.",
+            "imageUrl": "ttp5.png",
+            "features": ["Performance analytics", "Optimization recommendations", "Profitability analysis", "Sales trends"],
+            "specifications": {
+              "analytics": "Real-time performance data",
+              "recommendations": "AI-powered insights",
+              "profitability": "Item-level analysis",
+              "trends": "Historical trend analysis"
+            }
+          }
+        ]
+      },
+      "mobile_ordering": {
+        "name": "Mobile Ordering Apps",
+        "products": [
+          {
+            "id": "fb_mobile_001",
+            "name": "OrderNow Mobile App",
+            "brand": "TechTwist",
+            "price": 499.99,
+            "description": "Native mobile ordering app with loyalty integration, push notifications, and delivery tracking.",
+            "imageUrl": "ttp6.png",
+            "features": ["Native mobile apps", "Loyalty integration", "Push notifications", "Delivery tracking"],
+            "specifications": {
+              "platforms": "iOS/Android native",
+              "loyalty": "Built-in rewards system",
+              "notifications": "Smart push messaging",
+              "tracking": "Real-time order tracking"
+            }
+          },
+          {
+            "id": "fb_mobile_002",
+            "name": "QuickOrder Express",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Fast mobile ordering solution for quick-service restaurants with one-touch reordering and favorites.",
+            "imageUrl": "ttp7.png",
+            "features": ["One-touch reordering", "Favorites system", "Express checkout", "QSR optimized"],
+            "specifications": {
+              "reordering": "Single-tap repeat orders",
+              "favorites": "Personal preference saving",
+              "checkout": "Streamlined payment",
+              "optimization": "QSR workflow focus"
+            }
+          },
+          {
+            "id": "fb_mobile_003",
+            "name": "CateringApp Pro",
+            "brand": "TechTwist",
+            "price": 699.99,
+            "description": "Specialized mobile app for catering orders with group ordering, advance scheduling, and event management.",
+            "imageUrl": "ttp8.png",
+            "features": ["Group ordering", "Advance scheduling", "Event management", "Large order handling"],
+            "specifications": {
+              "groups": "Multi-user ordering",
+              "scheduling": "Up to 30 days advance",
+              "events": "Event planning tools",
+              "orders": "Large quantity support"
+            }
+          },
+          {
+            "id": "fb_mobile_004",
+            "name": "WebOrder Lite",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Lightweight web-based ordering system that works on any mobile device without app installation.",
+            "imageUrl": "ttp9.png",
+            "features": ["No app required", "Cross-platform", "Lightweight", "Quick deployment"],
+            "specifications": {
+              "installation": "Web-based, no download",
+              "platforms": "All mobile browsers",
+              "size": "Minimal data usage",
+              "deployment": "24-hour setup"
+            }
+          },
+          {
+            "id": "fb_mobile_005",
+            "name": "SocialOrder Integration",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Social media integrated ordering system with Instagram/Facebook integration and social sharing features.",
+            "imageUrl": "ttp10.png",
+            "features": ["Social media integration", "Instagram ordering", "Social sharing", "Influencer features"],
+            "specifications": {
+              "integration": "Instagram/Facebook native",
+              "ordering": "Direct social ordering",
+              "sharing": "Photo/review sharing",
+              "influencers": "Partnership tools"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "personalServices": {
+    "name": "Personal Services",
+    "productAreas": {
+      "appointment_software": {
+        "name": "Appointment Scheduling Software",
+        "products": [
+          {
+            "id": "ps_app_001",
+            "name": "BookingMaster Pro",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Comprehensive appointment scheduling software with online booking, automated reminders, and client management.",
+            "imageUrl": "ttp8.png",
+            "features": ["Online booking", "Automated reminders", "Calendar sync", "Client profiles"],
+            "specifications": {
+              "deployment": "Cloud-based",
+              "users": "Unlimited",
+              "storage": "100GB",
+              "support": "24/7"
+            }
+          },
+          {
+            "id": "ps_app_002",
+            "name": "QuickBook Salon Scheduler",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Salon and spa specific scheduling system with service duration management and staff assignments.",
+            "imageUrl": "ttp9.png",
+            "features": ["Service duration tracking", "Staff scheduling", "Room assignments", "Package bookings"],
+            "specifications": {
+              "services": "Unlimited service types",
+              "staff": "Up to 50 staff members",
+              "rooms": "Multi-room support",
+              "packages": "Service package builder"
+            }
+          },
+          {
+            "id": "ps_app_003",
+            "name": "FlexiSchedule Mobile",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "Mobile-first appointment scheduling with on-the-go booking management for service providers.",
+            "imageUrl": "ttp10.png",
+            "features": ["Mobile-first design", "Offline capability", "GPS integration", "Travel time calculation"],
+            "specifications": {
+              "platform": "iOS/Android native",
+              "offline": "Full offline mode",
+              "gps": "Location services",
+              "sync": "Real-time sync"
+            }
+          },
+          {
+            "id": "ps_app_004",
+            "name": "EnterpriseBook Multi-Location",
+            "brand": "TechTwist",
+            "price": 499.99,
+            "description": "Enterprise scheduling solution for multi-location service businesses with centralized management.",
+            "imageUrl": "ttp11.png",
+            "features": ["Multi-location support", "Centralized management", "Franchise ready", "Advanced reporting"],
+            "specifications": {
+              "locations": "Unlimited locations",
+              "management": "Centralized dashboard",
+              "reporting": "Advanced analytics",
+              "integration": "API available"
+            }
+          },
+          {
+            "id": "ps_app_005",
+            "name": "SimpleSchedule Basic",
+            "brand": "TechTwist",
+            "price": 99.99,
+            "description": "Easy-to-use basic scheduling system perfect for small service providers and freelancers.",
+            "imageUrl": "ttp12.png",
+            "features": ["Simple interface", "Basic scheduling", "Email notifications", "Calendar view"],
+            "specifications": {
+              "complexity": "Basic features",
+              "setup": "5-minute setup",
+              "notifications": "Email/SMS",
+              "calendar": "Week/month view"
+            }
+          }
+        ]
+      },
+      "client_management": {
+        "name": "Client Management Systems",
+        "products": [
+          {
+            "id": "ps_crm_001",
+            "name": "ClientCare CRM Suite",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Complete client relationship management system with service history tracking and communication tools.",
+            "imageUrl": "ttp1.png",
+            "features": ["Service history", "Communication logs", "Follow-up automation", "Analytics"],
+            "specifications": {
+              "contacts": "Unlimited",
+              "integrations": "50+",
+              "mobile": "iOS/Android apps",
+              "backup": "Daily automated"
+            }
+          },
+          {
+            "id": "ps_crm_002",
+            "name": "PersonalTouch Client Portal",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "Client portal system allowing customers to view history, book services, and communicate directly.",
+            "imageUrl": "ttp2.png",
+            "features": ["Client self-service", "Service history access", "Direct messaging", "Feedback system"],
+            "specifications": {
+              "portal": "White-label portal",
+              "access": "24/7 client access",
+              "messaging": "Two-way communication",
+              "feedback": "Review system"
+            }
+          },
+          {
+            "id": "ps_crm_003",
+            "name": "LoyaltyMax Retention System",
+            "brand": "TechTwist",
+            "price": 249.99,
+            "description": "Client retention system with loyalty programs, reward tracking, and automated marketing campaigns.",
+            "imageUrl": "ttp3.png",
+            "features": ["Loyalty programs", "Reward tracking", "Automated campaigns", "Retention analytics"],
+            "specifications": {
+              "programs": "Multiple loyalty tiers",
+              "rewards": "Points/discount system",
+              "campaigns": "Email/SMS automation",
+              "analytics": "Retention metrics"
+            }
+          },
+          {
+            "id": "ps_crm_004",
+            "name": "ServiceSync Contact Manager",
+            "brand": "TechTwist",
+            "price": 179.99,
+            "description": "Streamlined contact management with service preferences, notes, and communication history.",
+            "imageUrl": "ttp4.png",
+            "features": ["Contact organization", "Service preferences", "Detailed notes", "Communication timeline"],
+            "specifications": {
+              "organization": "Tag-based system",
+              "preferences": "Detailed service profiles",
+              "notes": "Rich text notes",
+              "timeline": "Complete history"
+            }
+          },
+          {
+            "id": "ps_crm_005",
+            "name": "ClientInsight Analytics Pro",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Advanced client analytics platform with behavior prediction and business intelligence tools.",
+            "imageUrl": "ttp5.png",
+            "features": ["Predictive analytics", "Behavior analysis", "Business intelligence", "Custom reports"],
+            "specifications": {
+              "analytics": "AI-powered insights",
+              "prediction": "Churn prediction",
+              "intelligence": "Business metrics",
+              "reports": "Custom dashboards"
+            }
+          }
+        ]
+      },
+      "payment_terminals": {
+        "name": "Payment Processing Terminals",
+        "products": [
+          {
+            "id": "ps_pay_001",
+            "name": "SalonPay Pro Terminal",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Specialized payment terminal for salons and spas with tip processing and service tracking.",
+            "imageUrl": "ttp6.png",
+            "features": ["Tip processing", "Service tracking", "Client profiles", "Receipt printing"],
+            "specifications": {
+              "tips": "Automatic tip calculation",
+              "tracking": "Service history logging",
+              "profiles": "Client payment preferences",
+              "printing": "Thermal receipt printer"
+            }
+          },
+          {
+            "id": "ps_pay_002",
+            "name": "MobilePay Handheld",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Portable payment terminal for mobile service providers and home visits.",
+            "imageUrl": "ttp7.png",
+            "features": ["Portable design", "Long battery life", "4G connectivity", "Secure processing"],
+            "specifications": {
+              "battery": "10 hours continuous",
+              "connectivity": "4G LTE + WiFi",
+              "security": "EMV certified",
+              "weight": "8 oz"
+            }
+          },
+          {
+            "id": "ps_pay_003",
+            "name": "ContactlessPay Station",
+            "brand": "TechTwist",
+            "price": 249.99,
+            "description": "Contactless payment station supporting all digital payment methods and wallets.",
+            "imageUrl": "ttp8.png",
+            "features": ["Contactless only", "Digital wallets", "QR code payments", "Instant processing"],
+            "specifications": {
+              "contactless": "NFC enabled",
+              "wallets": "Apple Pay, Google Pay, Samsung Pay",
+              "qr": "QR code scanning",
+              "speed": "Sub-second processing"
+            }
+          },
+          {
+            "id": "ps_pay_004",
+            "name": "FlexiPay Multi-Terminal",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Multi-functional payment terminal with integrated receipt printer and customer display.",
+            "imageUrl": "ttp9.png",
+            "features": ["Multi-functional", "Integrated printer", "Customer display", "All payment types"],
+            "specifications": {
+              "functions": "Payment + printing + display",
+              "printer": "58mm thermal printer",
+              "display": "Customer-facing LCD",
+              "payments": "EMV, NFC, magnetic stripe"
+            }
+          },
+          {
+            "id": "ps_pay_005",
+            "name": "SecurePay Professional",
+            "brand": "TechTwist",
+            "price": 449.99,
+            "description": "Professional-grade payment terminal with advanced security features and compliance reporting.",
+            "imageUrl": "ttp10.png",
+            "features": ["Advanced security", "Compliance reporting", "Fraud protection", "Professional grade"],
+            "specifications": {
+              "security": "End-to-end encryption",
+              "compliance": "PCI DSS certified",
+              "fraud": "Real-time fraud detection",
+              "grade": "Commercial durability"
+            }
+          }
+        ]
+      },
+      "booking_platforms": {
+        "name": "Digital Booking Platforms",
+        "products": [
+          {
+            "id": "ps_book_001",
+            "name": "BookAnywhere Platform",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Multi-channel booking platform supporting website, mobile app, and social media bookings.",
+            "imageUrl": "ttp11.png",
+            "features": ["Multi-channel booking", "Social media integration", "Real-time availability", "Automated confirmations"],
+            "specifications": {
+              "channels": "Website, app, social media",
+              "social": "Facebook, Instagram integration",
+              "availability": "Real-time sync",
+              "confirmations": "Automated email/SMS"
+            }
+          },
+          {
+            "id": "ps_book_002",
+            "name": "InstantBook Express",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "Express booking platform for quick appointment scheduling with minimal setup requirements.",
+            "imageUrl": "ttp12.png",
+            "features": ["Quick setup", "Express booking", "Simple interface", "Mobile optimized"],
+            "specifications": {
+              "setup": "15-minute configuration",
+              "booking": "One-click appointments",
+              "interface": "User-friendly design",
+              "mobile": "Mobile-responsive"
+            }
+          },
+          {
+            "id": "ps_book_003",
+            "name": "GroupBook Multi-Service",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Group booking platform for multi-service businesses with package deals and group discounts.",
+            "imageUrl": "ttp1.png",
+            "features": ["Group bookings", "Package deals", "Group discounts", "Event scheduling"],
+            "specifications": {
+              "groups": "Unlimited group size",
+              "packages": "Custom service packages",
+              "discounts": "Automatic group pricing",
+              "events": "Special event booking"
+            }
+          },
+          {
+            "id": "ps_book_004",
+            "name": "PremiumBook Enterprise",
+            "brand": "TechTwist",
+            "price": 499.99,
+            "description": "Enterprise booking platform with advanced features for large service organizations.",
+            "imageUrl": "ttp2.png",
+            "features": ["Enterprise features", "Advanced analytics", "Multi-location support", "API integration"],
+            "specifications": {
+              "features": "Full feature set",
+              "analytics": "Business intelligence",
+              "locations": "Unlimited locations",
+              "api": "REST API available"
+            }
+          },
+          {
+            "id": "ps_book_005",
+            "name": "SmartBook AI Platform",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "AI-powered booking platform with predictive scheduling and automated optimization.",
+            "imageUrl": "ttp3.png",
+            "features": ["AI-powered", "Predictive scheduling", "Automated optimization", "Smart recommendations"],
+            "specifications": {
+              "ai": "Machine learning algorithms",
+              "prediction": "Demand forecasting",
+              "optimization": "Schedule optimization",
+              "recommendations": "Service suggestions"
+            }
+          }
+        ]
+      },
+      "service_management": {
+        "name": "Service Management Apps",
+        "products": [
+          {
+            "id": "ps_svc_001",
+            "name": "ServiceFlow Manager",
+            "brand": "TechTwist",
+            "price": 249.99,
+            "description": "Complete service management app with workflow automation and quality tracking.",
+            "imageUrl": "ttp4.png",
+            "features": ["Workflow automation", "Quality tracking", "Service protocols", "Performance metrics"],
+            "specifications": {
+              "automation": "Custom workflow rules",
+              "tracking": "Quality checkpoints",
+              "protocols": "Service standardization",
+              "metrics": "Performance dashboards"
+            }
+          },
+          {
+            "id": "ps_svc_002",
+            "name": "MobileService Pro",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Mobile service management app for field service professionals with GPS tracking.",
+            "imageUrl": "ttp5.png",
+            "features": ["Mobile-first design", "GPS tracking", "Route optimization", "Offline capability"],
+            "specifications": {
+              "design": "Native mobile apps",
+              "gps": "Real-time location tracking",
+              "routes": "Intelligent route planning",
+              "offline": "Full offline functionality"
+            }
+          },
+          {
+            "id": "ps_svc_003",
+            "name": "TeamService Coordinator",
+            "brand": "TechTwist",
+            "price": 349.99,
+            "description": "Team coordination app for multi-service businesses with staff scheduling and task management.",
+            "imageUrl": "ttp6.png",
+            "features": ["Team coordination", "Staff scheduling", "Task management", "Communication tools"],
+            "specifications": {
+              "coordination": "Team workflow management",
+              "scheduling": "Staff availability tracking",
+              "tasks": "Task assignment and tracking",
+              "communication": "In-app messaging"
+            }
+          },
+          {
+            "id": "ps_svc_004",
+            "name": "ServiceAnalytics Dashboard",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Analytics-focused service management with KPI tracking and business intelligence.",
+            "imageUrl": "ttp7.png",
+            "features": ["KPI tracking", "Business intelligence", "Custom reports", "Trend analysis"],
+            "specifications": {
+              "kpis": "Customizable metrics",
+              "intelligence": "Advanced analytics",
+              "reports": "Custom report builder",
+              "trends": "Historical analysis"
+            }
+          },
+          {
+            "id": "ps_svc_005",
+            "name": "QualityService Monitor",
+            "brand": "TechTwist",
+            "price": 279.99,
+            "description": "Quality monitoring system with customer feedback integration and service improvement tools.",
+            "imageUrl": "ttp8.png",
+            "features": ["Quality monitoring", "Customer feedback", "Service improvement", "Compliance tracking"],
+            "specifications": {
+              "monitoring": "Real-time quality checks",
+              "feedback": "Automated feedback collection",
+              "improvement": "Improvement recommendations",
+              "compliance": "Standards compliance"
+            }
+          }
+        ]
+      },
+      "communication_tools": {
+        "name": "Customer Communication Tools",
+        "products": [
+          {
+            "id": "ps_comm_001",
+            "name": "ClientConnect Pro",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "Multi-channel customer communication platform with SMS, email, and in-app messaging.",
+            "imageUrl": "ttp9.png",
+            "features": ["Multi-channel messaging", "Automated campaigns", "Template library", "Delivery tracking"],
+            "specifications": {
+              "channels": "SMS, email, push, in-app",
+              "automation": "Campaign automation",
+              "templates": "Pre-built templates",
+              "tracking": "Delivery and read receipts"
+            }
+          },
+          {
+            "id": "ps_comm_002",
+            "name": "SmartNotify System",
+            "brand": "TechTwist",
+            "price": 99.99,
+            "description": "Intelligent notification system with appointment reminders and follow-up automation.",
+            "imageUrl": "ttp10.png",
+            "features": ["Smart notifications", "Appointment reminders", "Follow-up automation", "Personalization"],
+            "specifications": {
+              "intelligence": "AI-powered timing",
+              "reminders": "Multi-step reminders",
+              "automation": "Follow-up sequences",
+              "personalization": "Custom messaging"
+            }
+          },
+          {
+            "id": "ps_comm_003",
+            "name": "FeedbackLoop Collector",
+            "brand": "TechTwist",
+            "price": 179.99,
+            "description": "Customer feedback collection system with survey tools and reputation management.",
+            "imageUrl": "ttp11.png",
+            "features": ["Feedback collection", "Survey tools", "Reputation management", "Review responses"],
+            "specifications": {
+              "collection": "Multiple feedback methods",
+              "surveys": "Custom survey builder",
+              "reputation": "Online reputation monitoring",
+              "responses": "Automated review responses"
+            }
+          },
+          {
+            "id": "ps_comm_004",
+            "name": "VideoConnect Consultation",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Video consultation platform for remote service delivery and virtual appointments.",
+            "imageUrl": "ttp12.png",
+            "features": ["Video consultations", "Screen sharing", "Recording capability", "Secure connections"],
+            "specifications": {
+              "video": "HD video quality",
+              "sharing": "Screen and file sharing",
+              "recording": "Session recording",
+              "security": "End-to-end encryption"
+            }
+          },
+          {
+            "id": "ps_comm_005",
+            "name": "SocialConnect Manager",
+            "brand": "TechTwist",
+            "price": 219.99,
+            "description": "Social media communication manager with unified inbox and social customer service tools.",
+            "imageUrl": "ttp1.png",
+            "features": ["Unified inbox", "Social monitoring", "Response automation", "Engagement analytics"],
+            "specifications": {
+              "inbox": "All social platforms",
+              "monitoring": "Brand mention tracking",
+              "automation": "Auto-response rules",
+              "analytics": "Engagement metrics"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "healthWellness": {
+    "name": "Health & Wellness",
+    "productAreas": {
+      "practice_management": {
+        "name": "Medical Practice Management",
+        "products": [
+          {
+            "id": "hw_pm_001",
+            "name": "MedPractice Complete",
+            "brand": "TechTwist",
+            "price": 1999.99,
+            "description": "Comprehensive medical practice management system with scheduling, billing, and patient management.",
+            "imageUrl": "ttp6.png",
+            "features": ["Patient scheduling", "Insurance billing", "EMR integration", "HIPAA compliant"],
+            "specifications": {
+              "compliance": "HIPAA/HITECH",
+              "integrations": "Major EMR systems",
+              "backup": "Encrypted cloud",
+              "support": "Medical IT specialists"
+            }
+          },
+          {
+            "id": "hw_pm_002",
+            "name": "ClinicFlow Workflow Manager",
+            "brand": "TechTwist",
+            "price": 1499.99,
+            "description": "Workflow optimization system for medical clinics with patient flow tracking and resource management.",
+            "imageUrl": "ttp7.png",
+            "features": ["Patient flow tracking", "Resource management", "Wait time optimization", "Staff coordination"],
+            "specifications": {
+              "tracking": "Real-time patient location",
+              "resources": "Room/equipment scheduling",
+              "optimization": "AI-powered flow",
+              "coordination": "Staff communication"
+            }
+          },
+          {
+            "id": "hw_pm_003",
+            "name": "SmallPractice Essentials",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "Essential practice management tools designed for small medical practices and solo practitioners.",
+            "imageUrl": "ttp8.png",
+            "features": ["Basic scheduling", "Simple billing", "Patient records", "Affordable pricing"],
+            "specifications": {
+              "patients": "Up to 1,000 patients",
+              "providers": "Up to 3 providers",
+              "billing": "Basic insurance billing",
+              "records": "Essential documentation"
+            }
+          },
+          {
+            "id": "hw_pm_004",
+            "name": "SpecialtyMed Focused System",
+            "brand": "TechTwist",
+            "price": 2499.99,
+            "description": "Specialty-focused practice management with customizable workflows for specific medical specialties.",
+            "imageUrl": "ttp9.png",
+            "features": ["Specialty workflows", "Custom templates", "Specialized billing", "Clinical protocols"],
+            "specifications": {
+              "specialties": "20+ specialty modules",
+              "workflows": "Customizable processes",
+              "billing": "Specialty-specific codes",
+              "protocols": "Evidence-based guidelines"
+            }
+          },
+          {
+            "id": "hw_pm_005",
+            "name": "IntegratedHealth Platform",
+            "brand": "TechTwist",
+            "price": 3499.99,
+            "description": "Enterprise-level integrated health platform for large medical groups and health systems.",
+            "imageUrl": "ttp10.png",
+            "features": ["Multi-site management", "Population health", "Quality metrics", "Enterprise integration"],
+            "specifications": {
+              "sites": "Unlimited locations",
+              "population": "Population health tools",
+              "metrics": "Quality reporting",
+              "integration": "HL7/FHIR compliant"
+            }
+          }
+        ]
+      },
+      "ehr_systems": {
+        "name": "Electronic Health Records",
+        "products": [
+          {
+            "id": "hw_ehr_001",
+            "name": "HealthRecord Pro EHR",
+            "brand": "TechTwist",
+            "price": 2499.99,
+            "description": "Secure electronic health records system with clinical decision support and patient portal integration.",
+            "imageUrl": "ttp11.png",
+            "features": ["Clinical decision support", "Patient portal", "Lab integration", "Prescription management"],
+            "specifications": {
+              "certification": "ONC certified",
+              "interoperability": "HL7 FHIR",
+              "security": "256-bit encryption",
+              "uptime": "99.9% SLA"
+            }
+          },
+          {
+            "id": "hw_ehr_002",
+            "name": "MobileEHR Touch System",
+            "brand": "TechTwist",
+            "price": 1999.99,
+            "description": "Tablet-optimized EHR system for mobile healthcare providers and point-of-care documentation.",
+            "imageUrl": "ttp12.png",
+            "features": ["Tablet optimized", "Offline capability", "Voice recognition", "Touch-friendly interface"],
+            "specifications": {
+              "devices": "iOS/Android tablets",
+              "offline": "Full offline mode",
+              "voice": "Medical voice recognition",
+              "interface": "Touch-optimized UI"
+            }
+          },
+          {
+            "id": "hw_ehr_003",
+            "name": "CloudEHR Subscription",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Cloud-based EHR with subscription pricing model, perfect for small to medium practices.",
+            "imageUrl": "ttp1.png",
+            "features": ["Cloud-based", "Subscription model", "Automatic updates", "Scalable pricing"],
+            "specifications": {
+              "deployment": "100% cloud",
+              "pricing": "Per provider/month",
+              "updates": "Automatic",
+              "scaling": "Pay as you grow"
+            }
+          },
+          {
+            "id": "hw_ehr_004",
+            "name": "PediatricEHR Specialized",
+            "brand": "TechTwist",
+            "price": 2199.99,
+            "description": "Pediatric-specific EHR with growth charts, vaccination tracking, and child-friendly interfaces.",
+            "imageUrl": "ttp2.png",
+            "features": ["Pediatric focused", "Growth charts", "Vaccination tracking", "Child-friendly"],
+            "specifications": {
+              "specialty": "Pediatric optimization",
+              "charts": "WHO/CDC growth charts",
+              "vaccines": "Immunization registry",
+              "interface": "Child-appropriate design"
+            }
+          },
+          {
+            "id": "hw_ehr_005",
+            "name": "EnterpriseEHR Hospital System",
+            "brand": "TechTwist",
+            "price": 4999.99,
+            "description": "Enterprise-grade EHR system designed for hospitals and large health systems with advanced integration.",
+            "imageUrl": "ttp3.png",
+            "features": ["Hospital-grade", "Advanced integration", "Multi-department", "Enterprise scale"],
+            "specifications": {
+              "scale": "Enterprise-level",
+              "integration": "Full hospital systems",
+              "departments": "All clinical areas",
+              "users": "Unlimited concurrent"
+            }
+          }
+        ]
+      },
+      "checkin_kiosks": {
+        "name": "Patient Check-in Kiosks",
+        "products": [
+          {
+            "id": "hw_kiosk_001",
+            "name": "CheckInEasy Self-Service Kiosk",
+            "brand": "TechTwist",
+            "price": 2999.99,
+            "description": "Self-service patient check-in kiosk with insurance verification and appointment confirmation.",
+            "imageUrl": "ttp4.png",
+            "features": ["Self-service check-in", "Insurance verification", "Appointment confirmation", "Payment processing"],
+            "specifications": {
+              "screen": "21.5 inch touchscreen",
+              "verification": "Real-time insurance check",
+              "payment": "Credit/debit card reader",
+              "privacy": "HIPAA compliant design"
+            }
+          },
+          {
+            "id": "hw_kiosk_002",
+            "name": "ExpressCheck Tablet Station",
+            "brand": "TechTwist",
+            "price": 1499.99,
+            "description": "Tablet-based check-in station for smaller practices with wireless connectivity and patient data sync.",
+            "imageUrl": "ttp5.png",
+            "features": ["Tablet-based", "Wireless connectivity", "Patient data sync", "Compact design"],
+            "specifications": {
+              "screen": "12.9 inch tablet",
+              "connectivity": "WiFi/4G",
+              "sync": "Real-time EMR sync",
+              "mount": "Secure tablet stand"
+            }
+          },
+          {
+            "id": "hw_kiosk_003",
+            "name": "MultiLingual Access Kiosk",
+            "brand": "TechTwist",
+            "price": 3499.99,
+            "description": "Multi-language patient kiosk with voice assistance and accessibility features for diverse populations.",
+            "imageUrl": "ttp6.png",
+            "features": ["Multi-language support", "Voice assistance", "Accessibility features", "Cultural sensitivity"],
+            "specifications": {
+              "languages": "50+ languages",
+              "voice": "Voice-guided interface",
+              "accessibility": "ADA compliant",
+              "cultural": "Culturally appropriate UI"
+            }
+          },
+          {
+            "id": "hw_kiosk_004",
+            "name": "HealthScreen Vitals Kiosk",
+            "brand": "TechTwist",
+            "price": 4999.99,
+            "description": "Advanced kiosk with integrated vital signs monitoring and health screening capabilities.",
+            "imageUrl": "ttp7.png",
+            "features": ["Vital signs monitoring", "Health screening", "BMI calculation", "Temperature checking"],
+            "specifications": {
+              "vitals": "BP, pulse, temperature, weight",
+              "screening": "Health questionnaires",
+              "calculation": "Automated BMI",
+              "integration": "EMR integration"
+            }
+          },
+          {
+            "id": "hw_kiosk_005",
+            "name": "MobileCheck Portable Unit",
+            "brand": "TechTwist",
+            "price": 1999.99,
+            "description": "Portable check-in unit for mobile clinics and temporary healthcare facilities.",
+            "imageUrl": "ttp8.png",
+            "features": ["Portable design", "Battery powered", "Rugged construction", "Quick deployment"],
+            "specifications": {
+              "portability": "Wheeled cart design",
+              "battery": "8 hours continuous",
+              "construction": "Medical-grade materials",
+              "deployment": "15-minute setup"
+            }
+          }
+        ]
+      },
+      "telehealth": {
+        "name": "Telehealth Platforms",
+        "products": [
+          {
+            "id": "hw_tele_001",
+            "name": "VirtualCare Telehealth Platform",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "Complete telehealth platform with video consultations, remote monitoring, and prescription management.",
+            "imageUrl": "ttp9.png",
+            "features": ["Video consultations", "Remote monitoring", "Prescription management", "Patient portal"],
+            "specifications": {
+              "video": "HD video/audio",
+              "monitoring": "Connected device support",
+              "prescriptions": "E-prescribing integration",
+              "portal": "Patient access portal"
+            }
+          },
+          {
+            "id": "hw_tele_002",
+            "name": "RemoteMonitor Health Hub",
+            "brand": "TechTwist",
+            "price": 1299.99,
+            "description": "Remote patient monitoring platform with wearable device integration and alert systems.",
+            "imageUrl": "ttp10.png",
+            "features": ["Wearable integration", "Alert systems", "Trend analysis", "Care team communication"],
+            "specifications": {
+              "wearables": "100+ device types",
+              "alerts": "Real-time notifications",
+              "analysis": "Predictive analytics",
+              "communication": "Secure messaging"
+            }
+          },
+          {
+            "id": "hw_tele_003",
+            "name": "MentalHealth Connect",
+            "brand": "TechTwist",
+            "price": 699.99,
+            "description": "Specialized telehealth platform for mental health services with therapy tools and privacy features.",
+            "imageUrl": "ttp11.png",
+            "features": ["Mental health focused", "Therapy tools", "Enhanced privacy", "Crisis intervention"],
+            "specifications": {
+              "focus": "Mental health specialization",
+              "tools": "Therapy session tools",
+              "privacy": "Enhanced encryption",
+              "crisis": "24/7 crisis support"
+            }
+          },
+          {
+            "id": "hw_tele_004",
+            "name": "SpecialistConnect Referral",
+            "brand": "TechTwist",
+            "price": 1599.99,
+            "description": "Specialist telehealth platform with referral management and expert consultation features.",
+            "imageUrl": "ttp12.png",
+            "features": ["Specialist network", "Referral management", "Expert consultations", "Case collaboration"],
+            "specifications": {
+              "network": "10,000+ specialists",
+              "referrals": "Automated referral system",
+              "consultations": "Expert second opinions",
+              "collaboration": "Multi-provider cases"
+            }
+          },
+          {
+            "id": "hw_tele_005",
+            "name": "MobileTelehealth Field Unit",
+            "brand": "TechTwist",
+            "price": 2499.99,
+            "description": "Mobile telehealth unit for emergency services and rural healthcare delivery.",
+            "imageUrl": "ttp1.png",
+            "features": ["Mobile deployment", "Emergency ready", "Satellite connectivity", "Rugged design"],
+            "specifications": {
+              "deployment": "Rapid mobile setup",
+              "emergency": "Emergency protocols",
+              "connectivity": "Satellite internet",
+              "design": "All-weather operation"
+            }
+          }
+        ]
+      },
+      "billing_software": {
+        "name": "Billing and Insurance Software",
+        "products": [
+          {
+            "id": "hw_bill_001",
+            "name": "MedBill Pro Insurance Manager",
+            "brand": "TechTwist",
+            "price": 1999.99,
+            "description": "Comprehensive medical billing software with insurance claim processing and revenue cycle management.",
+            "imageUrl": "ttp2.png",
+            "features": ["Insurance claims", "Revenue cycle management", "Denial management", "Payment posting"],
+            "specifications": {
+              "claims": "All major insurers",
+              "cycle": "End-to-end revenue management",
+              "denials": "Automated denial tracking",
+              "posting": "Automated payment posting"
+            }
+          },
+          {
+            "id": "hw_bill_002",
+            "name": "QuickBill Express",
+            "brand": "TechTwist",
+            "price": 799.99,
+            "description": "Streamlined billing solution for small practices with simplified workflows and automated features.",
+            "imageUrl": "ttp3.png",
+            "features": ["Simplified workflows", "Automated features", "Small practice focus", "Easy setup"],
+            "specifications": {
+              "workflows": "Streamlined processes",
+              "automation": "Smart billing rules",
+              "focus": "1-10 provider practices",
+              "setup": "Quick implementation"
+            }
+          },
+          {
+            "id": "hw_bill_003",
+            "name": "EnterpriseBill Hospital System",
+            "brand": "TechTwist",
+            "price": 4999.99,
+            "description": "Enterprise billing solution for hospitals and health systems with complex billing requirements.",
+            "imageUrl": "ttp4.png",
+            "features": ["Hospital billing", "Complex requirements", "Multi-location support", "Advanced reporting"],
+            "specifications": {
+              "billing": "Hospital-grade complexity",
+              "requirements": "All billing scenarios",
+              "locations": "Multi-facility support",
+              "reporting": "Advanced analytics"
+            }
+          },
+          {
+            "id": "hw_bill_004",
+            "name": "PatientPay Portal",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Patient billing portal with online payments, payment plans, and transparent pricing display.",
+            "imageUrl": "ttp5.png",
+            "features": ["Online payments", "Payment plans", "Transparent pricing", "Mobile friendly"],
+            "specifications": {
+              "payments": "Multiple payment methods",
+              "plans": "Flexible payment plans",
+              "pricing": "Clear cost breakdown",
+              "mobile": "Mobile-optimized portal"
+            }
+          },
+          {
+            "id": "hw_bill_005",
+            "name": "ComplianceBill Regulatory",
+            "brand": "TechTwist",
+            "price": 1499.99,
+            "description": "Compliance-focused billing software with regulatory reporting and audit trail features.",
+            "imageUrl": "ttp6.png",
+            "features": ["Regulatory compliance", "Audit trails", "Compliance reporting", "Risk management"],
+            "specifications": {
+              "compliance": "All healthcare regulations",
+              "trails": "Complete audit logging",
+              "reporting": "Regulatory reports",
+              "risk": "Risk assessment tools"
+            }
+          }
+        ]
+      },
+      "wellness_apps": {
+        "name": "Wellness Tracking Apps",
+        "products": [
+          {
+            "id": "hw_well_001",
+            "name": "WellnessTracker Pro",
+            "brand": "TechTwist",
+            "price": 199.99,
+            "description": "Comprehensive wellness tracking app with fitness monitoring, nutrition logging, and health goal setting.",
+            "imageUrl": "ttp7.png",
+            "features": ["Fitness monitoring", "Nutrition logging", "Health goals", "Progress tracking"],
+            "specifications": {
+              "fitness": "Activity and exercise tracking",
+              "nutrition": "Calorie and macro tracking",
+              "goals": "Customizable health goals",
+              "progress": "Visual progress reports"
+            }
+          },
+          {
+            "id": "hw_well_002",
+            "name": "MindfulHealth Meditation",
+            "brand": "TechTwist",
+            "price": 149.99,
+            "description": "Mental wellness app with guided meditation, stress tracking, and mindfulness exercises.",
+            "imageUrl": "ttp8.png",
+            "features": ["Guided meditation", "Stress tracking", "Mindfulness exercises", "Sleep tracking"],
+            "specifications": {
+              "meditation": "500+ guided sessions",
+              "stress": "Stress level monitoring",
+              "mindfulness": "Daily exercises",
+              "sleep": "Sleep quality analysis"
+            }
+          },
+          {
+            "id": "hw_well_003",
+            "name": "CorporateWellness Platform",
+            "brand": "TechTwist",
+            "price": 999.99,
+            "description": "Corporate wellness platform with employee challenges, team competitions, and health analytics.",
+            "imageUrl": "ttp9.png",
+            "features": ["Employee challenges", "Team competitions", "Health analytics", "Incentive programs"],
+            "specifications": {
+              "challenges": "Customizable wellness challenges",
+              "competitions": "Team-based activities",
+              "analytics": "Population health insights",
+              "incentives": "Reward program management"
+            }
+          },
+          {
+            "id": "hw_well_004",
+            "name": "SeniorCare Wellness",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Senior-focused wellness app with medication reminders, fall detection, and emergency contacts.",
+            "imageUrl": "ttp10.png",
+            "features": ["Medication reminders", "Fall detection", "Emergency contacts", "Health monitoring"],
+            "specifications": {
+              "reminders": "Smart medication alerts",
+              "detection": "Automatic fall detection",
+              "contacts": "Emergency contact system",
+              "monitoring": "Vital signs tracking"
+            }
+          },
+          {
+            "id": "hw_well_005",
+            "name": "FamilyHealth Tracker",
+            "brand": "TechTwist",
+            "price": 249.99,
+            "description": "Family wellness app with multi-user profiles, shared goals, and parental controls.",
+            "imageUrl": "ttp11.png",
+            "features": ["Multi-user profiles", "Shared family goals", "Parental controls", "Health records"],
+            "specifications": {
+              "profiles": "Unlimited family members",
+              "goals": "Family wellness challenges",
+              "controls": "Age-appropriate content",
+              "records": "Family health history"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "hospitalityTourism": {
+    "name": "Hospitality & Tourism",
+    "productAreas": {
+      "hotel_management": {
+        "name": "Hotel Management Systems",
+        "products": [
+          {
+            "id": "ht_hms_001",
+            "name": "HotelMaster Enterprise PMS",
+            "brand": "TechTwist",
+            "price": 3499.99,
+            "description": "Complete property management system for hotels with reservation management, housekeeping coordination, and guest services.",
+            "imageUrl": "ttp4.png",
+            "features": ["Reservation management", "Housekeeping coordination", "Guest services", "Revenue management"],
+            "specifications": {
+              "rooms": "Unlimited",
+              "channels": "200+ booking sites",
+              "reporting": "Real-time analytics",
+              "mobile": "Staff mobile app"
+            }
+          },
+          {
+            "id": "ht_hms_002",
+            "name": "BoutiqueHotel Boutique PMS",
+            "brand": "TechTwist",
+            "price": 1999.99,
+            "description": "Elegant property management system designed specifically for boutique hotels and luxury properties.",
+            "imageUrl": "ttp5.png",
+            "features": ["Boutique focused", "Guest personalization", "Luxury amenities", "Concierge integration"],
+            "specifications": {
+              "rooms": "Up to 100 rooms",
+              "personalization": "Guest preference engine",
+              "amenities": "Luxury service tracking",
+              "concierge": "Request management"
+            }
+          },
+          {
+            "id": "ht_hms_003",
+            "name": "BudgetStay Economy PMS",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "Cost-effective property management system for budget hotels and economy accommodations.",
+            "imageUrl": "ttp6.png",
+            "features": ["Cost-effective", "Essential features", "Easy operation", "Quick setup"],
+            "specifications": {
+              "rooms": "Up to 50 rooms",
+              "features": "Core PMS functions",
+              "training": "Minimal training required",
+              "setup": "Same-day implementation"
+            }
+          },
+          {
+            "id": "ht_hms_004",
+            "name": "ResortManager Complete",
+            "brand": "TechTwist",
+            "price": 4999.99,
+            "description": "Comprehensive resort management system with activity booking, spa scheduling, and multi-venue coordination.",
+            "imageUrl": "ttp7.png",
+            "features": ["Resort operations", "Activity booking", "Spa integration", "Multi-venue support"],
+            "specifications": {
+              "activities": "Unlimited activity types",
+              "spa": "Full spa management",
+              "venues": "Multiple restaurants/bars",
+              "integration": "All-inclusive support"
+            }
+          },
+          {
+            "id": "ht_hms_005",
+            "name": "CloudHotel SaaS Platform",
+            "brand": "TechTwist",
+            "price": 299.99,
+            "description": "Cloud-based hotel management platform with subscription pricing and automatic updates.",
+            "imageUrl": "ttp8.png",
+            "features": ["Cloud-based", "Subscription model", "Automatic updates", "Multi-property"],
+            "specifications": {
+              "deployment": "100% cloud",
+              "pricing": "Monthly subscription",
+              "updates": "Automatic",
+              "properties": "Multi-property management"
+            }
+          }
+        ]
+      },
+      "booking_platforms": {
+        "name": "Online Booking Platforms",
+        "products": [
+          {
+            "id": "ht_book_001",
+            "name": "BookingEngine Pro",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "Multi-channel booking engine with real-time availability and dynamic pricing for hotels and resorts.",
+            "imageUrl": "ttp9.png",
+            "features": ["Real-time availability", "Dynamic pricing", "Multi-channel", "Mobile optimized"],
+            "specifications": {
+              "channels": "OTA integration",
+              "languages": "25+ languages",
+              "payment": "150+ gateways",
+              "analytics": "Booking insights"
+            }
+          },
+          {
+            "id": "ht_book_002",
+            "name": "DirectBook Hotel Website",
+            "brand": "TechTwist",
+            "price": 599.99,
+            "description": "Direct booking website solution with integrated booking engine and content management.",
+            "imageUrl": "ttp10.png",
+            "features": ["Website integration", "Content management", "SEO optimization", "Direct bookings"],
+            "specifications": {
+              "website": "Responsive design",
+              "cms": "Easy content updates",
+              "seo": "Search optimization",
+              "commission": "Zero commission"
+            }
+          },
+          {
+            "id": "ht_book_003",
+            "name": "MobileBook App Platform",
+            "brand": "TechTwist",
+            "price": 1299.99,
+            "description": "Native mobile app booking platform with push notifications and loyalty program integration.",
+            "imageUrl": "ttp11.png",
+            "features": ["Native mobile apps", "Push notifications", "Loyalty integration", "Offline browsing"],
+            "specifications": {
+              "platforms": "iOS/Android native",
+              "notifications": "Smart push messaging",
+              "loyalty": "Points/rewards system",
+              "offline": "Offline content viewing"
+            }
+          },
+          {
+            "id": "ht_book_004",
+            "name": "GroupBook Event Platform",
+            "brand": "TechTwist",
+            "price": 1599.99,
+            "description": "Specialized booking platform for group reservations, events, and corporate bookings.",
+            "imageUrl": "ttp12.png",
+            "features": ["Group reservations", "Event management", "Corporate rates", "Contract management"],
+            "specifications": {
+              "groups": "Unlimited group size",
+              "events": "Event planning tools",
+              "rates": "Corporate rate management",
+              "contracts": "Digital contracts"
+            }
+          },
+          {
+            "id": "ht_book_005",
+            "name": "InstantBook Quick Platform",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Quick-setup booking platform for small accommodations and vacation rentals.",
+            "imageUrl": "ttp1.png",
+            "features": ["Quick setup", "Vacation rental focus", "Calendar sync", "Guest communication"],
+            "specifications": {
+              "setup": "15-minute setup",
+              "focus": "Small properties",
+              "sync": "Multi-calendar sync",
+              "communication": "Guest messaging"
+            }
+          }
+        ]
+      },
+      "property_management": {
+        "name": "Property Management Software",
+        "products": [
+          {
+            "id": "ht_prop_001",
+            "name": "PropertyMaster Multi-Unit",
+            "brand": "TechTwist",
+            "price": 1999.99,
+            "description": "Multi-unit property management software for vacation rentals and extended stay properties.",
+            "imageUrl": "ttp2.png",
+            "features": ["Multi-unit management", "Maintenance tracking", "Lease management", "Financial reporting"],
+            "specifications": {
+              "units": "Unlimited properties",
+              "maintenance": "Work order system",
+              "leases": "Digital lease management",
+              "reporting": "Financial analytics"
+            }
+          },
+          {
+            "id": "ht_prop_002",
+            "name": "VacationRental Pro",
+            "brand": "TechTwist",
+            "price": 799.99,
+            "description": "Vacation rental management system with channel distribution and guest communication tools.",
+            "imageUrl": "ttp3.png",
+            "features": ["Channel distribution", "Guest communication", "Pricing optimization", "Cleaning schedules"],
+            "specifications": {
+              "channels": "Airbnb, VRBO, Booking.com",
+              "communication": "Automated guest messaging",
+              "pricing": "Dynamic pricing engine",
+              "cleaning": "Housekeeping coordination"
+            }
+          },
+          {
+            "id": "ht_prop_003",
+            "name": "CorporateStay Manager",
+            "brand": "TechTwist",
+            "price": 2499.99,
+            "description": "Corporate housing management platform with extended stay features and billing integration.",
+            "imageUrl": "ttp4.png",
+            "features": ["Extended stays", "Corporate billing", "Inventory management", "Guest services"],
+            "specifications": {
+              "stays": "Long-term accommodation",
+              "billing": "Corporate invoicing",
+              "inventory": "Furniture and amenities",
+              "services": "Concierge features"
+            }
+          },
+          {
+            "id": "ht_prop_004",
+            "name": "SmallProperty Simple",
+            "brand": "TechTwist",
+            "price": 399.99,
+            "description": "Simple property management solution for small bed & breakfasts and boutique properties.",
+            "imageUrl": "ttp5.png",
+            "features": ["Simple interface", "Guest check-in", "Basic reporting", "Payment processing"],
+            "specifications": {
+              "interface": "User-friendly design",
+              "checkin": "Self-service options",
+              "reporting": "Essential reports",
+              "payments": "Integrated processing"
+            }
+          },
+          {
+            "id": "ht_prop_005",
+            "name": "MultiProperty Enterprise",
+            "brand": "TechTwist",
+            "price": 4999.99,
+            "description": "Enterprise property management for large portfolios with centralized control and analytics.",
+            "imageUrl": "ttp6.png",
+            "features": ["Portfolio management", "Centralized control", "Advanced analytics", "Performance tracking"],
+            "specifications": {
+              "portfolio": "Unlimited properties",
+              "control": "Central management dashboard",
+              "analytics": "Business intelligence",
+              "tracking": "KPI monitoring"
+            }
+          }
+        ]
+      },
+      "guest_checkin": {
+        "name": "Guest Check-in Tablets",
+        "products": [
+          {
+            "id": "ht_checkin_001",
+            "name": "WelcomeTab Self-Check-in",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "Self-service check-in tablet with ID scanning, payment processing, and room key dispensing.",
+            "imageUrl": "ttp7.png",
+            "features": ["Self-service check-in", "ID scanning", "Payment processing", "Room key dispensing"],
+            "specifications": {
+              "scanning": "Passport/ID scanning",
+              "payment": "Credit card processing",
+              "keys": "RFID key dispensing",
+              "languages": "Multi-language support"
+            }
+          },
+          {
+            "id": "ht_checkin_002",
+            "name": "ExpressCheck Kiosk",
+            "brand": "TechTwist",
+            "price": 1299.99,
+            "description": "Express check-in kiosk with biometric verification and contactless payment options.",
+            "imageUrl": "ttp8.png",
+            "features": ["Biometric verification", "Contactless payments", "Express processing", "Digital receipts"],
+            "specifications": {
+              "biometrics": "Fingerprint/facial recognition",
+              "contactless": "NFC/tap payments",
+              "processing": "Sub-30 second check-in",
+              "receipts": "Email/SMS receipts"
+            }
+          },
+          {
+            "id": "ht_checkin_003",
+            "name": "LobbyAssist Concierge Tablet",
+            "brand": "TechTwist",
+            "price": 699.99,
+            "description": "Concierge tablet with local information, service booking, and guest request management.",
+            "imageUrl": "ttp9.png",
+            "features": ["Local information", "Service booking", "Guest requests", "Interactive maps"],
+            "specifications": {
+              "information": "Local attractions/dining",
+              "booking": "Restaurant/activity reservations",
+              "requests": "Room service/maintenance",
+              "maps": "Interactive city guides"
+            }
+          },
+          {
+            "id": "ht_checkin_004",
+            "name": "MobileCheck Handheld",
+            "brand": "TechTwist",
+            "price": 499.99,
+            "description": "Handheld mobile check-in device for staff-assisted check-in anywhere in the property.",
+            "imageUrl": "ttp10.png",
+            "features": ["Mobile staff device", "Anywhere check-in", "Real-time sync", "Guest verification"],
+            "specifications": {
+              "mobility": "Handheld tablet",
+              "location": "Property-wide check-in",
+              "sync": "Real-time PMS sync",
+              "verification": "ID verification"
+            }
+          },
+          {
+            "id": "ht_checkin_005",
+            "name": "SmartLobby Interactive Display",
+            "brand": "TechTwist",
+            "price": 1599.99,
+            "description": "Large interactive display for lobby check-in with queue management and digital concierge.",
+            "imageUrl": "ttp11.png",
+            "features": ["Large display", "Queue management", "Digital concierge", "Multi-user support"],
+            "specifications": {
+              "display": "32-inch touchscreen",
+              "queue": "Automated queue system",
+              "concierge": "AI-powered assistance",
+              "users": "Multiple simultaneous users"
+            }
+          }
+        ]
+      },
+      "revenue_management": {
+        "name": "Revenue Management Tools",
+        "products": [
+          {
+            "id": "ht_rev_001",
+            "name": "RevMax Dynamic Pricing",
+            "brand": "TechTwist",
+            "price": 1999.99,
+            "description": "Dynamic pricing engine with demand forecasting and competitive analysis for revenue optimization.",
+            "imageUrl": "ttp12.png",
+            "features": ["Dynamic pricing", "Demand forecasting", "Competitive analysis", "Rate optimization"],
+            "specifications": {
+              "pricing": "Real-time rate adjustments",
+              "forecasting": "AI-powered demand prediction",
+              "analysis": "Competitor rate monitoring",
+              "optimization": "Revenue maximization"
+            }
+          },
+          {
+            "id": "ht_rev_002",
+            "name": "YieldMaster Analytics",
+            "brand": "TechTwist",
+            "price": 1499.99,
+            "description": "Yield management analytics platform with performance tracking and profitability analysis.",
+            "imageUrl": "ttp1.png",
+            "features": ["Yield analytics", "Performance tracking", "Profitability analysis", "Market insights"],
+            "specifications": {
+              "analytics": "Advanced yield metrics",
+              "tracking": "Real-time performance",
+              "profitability": "Room-level analysis",
+              "insights": "Market trend analysis"
+            }
+          },
+          {
+            "id": "ht_rev_003",
+            "name": "BookingChannel Optimizer",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "Channel optimization tool for managing rates across multiple booking platforms and direct sales.",
+            "imageUrl": "ttp2.png",
+            "features": ["Channel optimization", "Rate parity", "Inventory distribution", "Performance comparison"],
+            "specifications": {
+              "channels": "All major OTAs",
+              "parity": "Automated rate monitoring",
+              "distribution": "Smart inventory allocation",
+              "comparison": "Channel performance metrics"
+            }
+          },
+          {
+            "id": "ht_rev_004",
+            "name": "EventRevenue Manager",
+            "brand": "TechTwist",
+            "price": 1299.99,
+            "description": "Event-specific revenue management for conferences, weddings, and group bookings.",
+            "imageUrl": "ttp3.png",
+            "features": ["Event pricing", "Group rate management", "Package optimization", "Event forecasting"],
+            "specifications": {
+              "pricing": "Event-based pricing models",
+              "groups": "Group discount optimization",
+              "packages": "Service package bundling",
+              "forecasting": "Event demand prediction"
+            }
+          },
+          {
+            "id": "ht_rev_005",
+            "name": "ProfitMax Business Intelligence",
+            "brand": "TechTwist",
+            "price": 2499.99,
+            "description": "Business intelligence platform with comprehensive revenue analytics and strategic planning tools.",
+            "imageUrl": "ttp4.png",
+            "features": ["Business intelligence", "Revenue analytics", "Strategic planning", "Custom dashboards"],
+            "specifications": {
+              "intelligence": "Advanced BI tools",
+              "analytics": "Comprehensive revenue data",
+              "planning": "Strategic forecasting",
+              "dashboards": "Customizable reporting"
+            }
+          }
+        ]
+      },
+      "experience_apps": {
+        "name": "Customer Experience Apps",
+        "products": [
+          {
+            "id": "ht_exp_001",
+            "name": "GuestJourney Experience App",
+            "brand": "TechTwist",
+            "price": 799.99,
+            "description": "Complete guest experience app with pre-arrival, during-stay, and post-departure engagement.",
+            "imageUrl": "ttp5.png",
+            "features": ["Guest journey mapping", "Pre-arrival engagement", "In-stay services", "Post-departure follow-up"],
+            "specifications": {
+              "journey": "End-to-end guest experience",
+              "engagement": "Personalized communication",
+              "services": "In-app service requests",
+              "followup": "Automated feedback collection"
+            }
+          },
+          {
+            "id": "ht_exp_002",
+            "name": "LoyalGuest Rewards Platform",
+            "brand": "TechTwist",
+            "price": 1199.99,
+            "description": "Guest loyalty platform with points, rewards, and personalized offers for repeat customers.",
+            "imageUrl": "ttp6.png",
+            "features": ["Loyalty program", "Points system", "Personalized offers", "Tier management"],
+            "specifications": {
+              "program": "Customizable loyalty tiers",
+              "points": "Flexible earning/redemption",
+              "offers": "AI-powered personalization",
+              "tiers": "Status level management"
+            }
+          },
+          {
+            "id": "ht_exp_003",
+            "name": "FeedbackLoop Guest Voice",
+            "brand": "TechTwist",
+            "price": 599.99,
+            "description": "Guest feedback management system with real-time surveys and reputation monitoring.",
+            "imageUrl": "ttp7.png",
+            "features": ["Real-time feedback", "Survey automation", "Reputation monitoring", "Response management"],
+            "specifications": {
+              "feedback": "Real-time collection",
+              "surveys": "Automated survey triggers",
+              "monitoring": "Online reputation tracking",
+              "responses": "Automated response system"
+            }
+          },
+          {
+            "id": "ht_exp_004",
+            "name": "PersonalConcierge AI Assistant",
+            "brand": "TechTwist",
+            "price": 1399.99,
+            "description": "AI-powered personal concierge with natural language processing and local recommendations.",
+            "imageUrl": "ttp8.png",
+            "features": ["AI concierge", "Natural language", "Local recommendations", "24/7 availability"],
+            "specifications": {
+              "ai": "Advanced NLP processing",
+              "language": "Multi-language support",
+              "recommendations": "Personalized suggestions",
+              "availability": "24/7 automated service"
+            }
+          },
+          {
+            "id": "ht_exp_005",
+            "name": "SocialConnect Guest Network",
+            "brand": "TechTwist",
+            "price": 899.99,
+            "description": "Social networking platform for guests to connect, share experiences, and discover activities.",
+            "imageUrl": "ttp9.png",
+            "features": ["Guest networking", "Experience sharing", "Activity discovery", "Social reviews"],
+            "specifications": {
+              "networking": "Guest-to-guest connections",
+              "sharing": "Photo/experience sharing",
+              "discovery": "Activity recommendations",
+              "reviews": "Peer review system"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

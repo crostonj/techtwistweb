@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Container, Box } from "@mui/material"; 
 import { ThemeProvider, createTheme } from "@mui/material/styles"; // Import ThemeProvider and createTheme
+import { NavigationProvider } from "./context/NavigationContext";
 import Navbar from "./components/layout/Navbar";
 import HomePage from "./components/HomePage";
 import ProfilePage from "./components/user/ProfilePage";
@@ -36,45 +37,47 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-          <AppBar position="static" color="primary">
-            <Toolbar>
-              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-                <img
-                  src="/high_five_icon.svg"
-                  alt="Homepage Link"
-                  style={{ height: "40px", marginRight: "20px" }}
-                />
-              </Link>
-              <Typography variant="h6" component="div">
-                TechTwist
-              </Typography>
-            </Toolbar>
-          </AppBar>
-          <Navbar />
+      <NavigationProvider>
+        <Router>
+          <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <AppBar position="static" color="primary">
+              <Toolbar>
+                <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+                  <img
+                    src="/high_five_icon.svg"
+                    alt="Homepage Link"
+                    style={{ height: "40px", marginRight: "20px" }}
+                  />
+                </Link>
+                <Typography variant="h6" component="div">
+                  TechTwist
+                </Typography>
+              </Toolbar>
+            </AppBar>
+            <Navbar />
 
-          <Container sx={{ flexGrow: 1, marginTop: "20px", marginBottom: "20px", paddingBottom: "120px" }}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/contact" element={<ContactUs />} /> {/* Add ContactUs route */}
-              <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/products" element={<ProductsList />} />
-              <Route path="/retailtechnologypage" element={<RetailTechnologyPage />} />
-              <Route path="/pointofsale" element={<PointofSale />} />
-              <Route path="/POSInfoPage" element={<POSInfoPage />} />
-              <Route path="/retail" element={<RetailPage />} />
-              <Route path="/food-beverage" element={<FoodBeveragePage />} />
-              <Route path="/personal-services" element={<PersonalServicesPage />} />
-              <Route path="/health-wellness" element={<HealthWellnessPage />} />
-              <Route path="/hospitality-tourism" element={<HospitalityTourismPage />} />
-            </Routes>
-          </Container>
-          
-          <Footer />
-        </Box>
-      </Router>
+            <Container sx={{ flexGrow: 1, marginTop: "20px", marginBottom: "20px", paddingBottom: "120px" }}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutUs />} />
+                <Route path="/contact" element={<ContactUs />} /> {/* Add ContactUs route */}
+                <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/products" element={<ProductsList />} />
+                <Route path="/retailtechnologypage" element={<RetailTechnologyPage />} />
+                <Route path="/pointofsale" element={<PointofSale />} />
+                <Route path="/POSInfoPage" element={<POSInfoPage />} />
+                <Route path="/retail" element={<RetailPage />} />
+                <Route path="/food-beverage" element={<FoodBeveragePage />} />
+                <Route path="/personal-services" element={<PersonalServicesPage />} />
+                <Route path="/health-wellness" element={<HealthWellnessPage />} />
+                <Route path="/hospitality-tourism" element={<HospitalityTourismPage />} />
+              </Routes>
+            </Container>
+            
+            <Footer />
+          </Box>
+        </Router>
+      </NavigationProvider>
     </ThemeProvider>
   );
 }

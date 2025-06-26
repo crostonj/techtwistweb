@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { fetchProducts } from "../../services/apiService";
+import { 
+  fetchProducts, 
+  fetchProductsByIndustry, 
+  fetchProductsByArea
+} from "../../services/industryProductService";
+import { useNavigation } from "../../context/NavigationContext";
 import {
   CircularProgress,
   Typography,
@@ -12,18 +17,30 @@ import ProductDetail from "./ProductDetail";
 
 function ProductsList() {
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  
+  // Get navigation context
+  const { 
+    selectedIndustry, 
+    selectedProductArea, 
+    industryName,
+    productAreaName
+  } = useNavigation();
 
   useEffect(() => {
-    const loadProducts = async () => {
+    const loadInitialData = async () => {
       try {
-        const data = await fetchProducts();
-        if (!data || data.length === 0) {
+        const productsData = await fetchProducts();
+        
+        if (!productsData || productsData.length === 0) {
           throw new Error("No products found");
         }
-        setFilteredProducts(data);
+        
+        setAllProducts(productsData);
+        setFilteredProducts(productsData);
         setLoading(false);
       } catch (err) {
         setError(err);
@@ -31,8 +48,34 @@ function ProductsList() {
       }
     };
 
-    loadProducts();
+    loadInitialData();
   }, []);
+
+  // Filter products based on navigation context
+  useEffect(() => {
+    const filterProducts = async () => {
+      try {
+        let products;
+        
+        if (selectedIndustry && selectedProductArea) {
+          products = await fetchProductsByArea(selectedIndustry, selectedProductArea);
+        } else if (selectedIndustry) {
+          products = await fetchProductsByIndustry(selectedIndustry);
+        } else {
+          products = allProducts;
+        }
+        
+        setFilteredProducts(products);
+        // Clear selected product when navigation context changes
+        setSelectedProduct(null);
+      } catch (err) {
+        console.error('Error filtering products:', err);
+        setFilteredProducts([]);
+      }
+    };
+
+    filterProducts();
+  }, [selectedIndustry, selectedProductArea, allProducts]);
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -65,20 +108,27 @@ function ProductsList() {
   return (
     <Box sx={{ padding: "20px" }}>
       <Typography variant="h4" gutterBottom>
-        All Products
+        {selectedIndustry && selectedProductArea 
+          ? `${industryName} - ${productAreaName}` 
+          : selectedIndustry 
+          ? `${industryName} Products`
+          : 'All Products'
+        }
       </Typography>
+
+      {/* Products List */}
       {filteredProducts.length > 0 ? (
         <List>
           {filteredProducts.map((product) => (
             <ProductItem
               key={product.id}
               product={product}
-              onClick={() => handleProductClick(product)} // Pass the product to ProductDetail
+              onClick={() => handleProductClick(product)}
             />
           ))}
         </List>
       ) : (
-        <Typography variant="body1">No products available.</Typography>
+        <Typography variant="body1">No products available for the selected category.</Typography>
       )}
     </Box>
   );
