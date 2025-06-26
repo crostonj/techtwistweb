@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { AppBar, Toolbar, Typography, Container } from "@mui/material"; 
+import { AppBar, Toolbar, Typography, Container, Box } from "@mui/material"; 
 import { ThemeProvider, createTheme } from "@mui/material/styles"; // Import ThemeProvider and createTheme
 import Navbar from "./components/layout/Navbar";
 import HomePage from "./components/HomePage";
@@ -37,7 +37,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <AppBar position="static" color="primary">
             <Toolbar>
               <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
@@ -54,7 +54,7 @@ function App() {
           </AppBar>
           <Navbar />
 
-          <Container style={{ marginTop: "20px" }}>
+          <Container sx={{ flexGrow: 1, marginTop: "20px", marginBottom: "20px", paddingBottom: "120px" }}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutUs />} />
@@ -71,8 +71,9 @@ function App() {
               <Route path="/hospitality-tourism" element={<HospitalityTourismPage />} />
             </Routes>
           </Container>
+          
           <Footer />
-
+        </Box>
       </Router>
     </ThemeProvider>
   );

@@ -42,7 +42,16 @@ function Footer() {
       </Box>
 
       {/* Footer */}
-      <AppBar position="static" color="primary" component="footer">
+      <AppBar 
+        position="fixed" 
+        color="primary" 
+        component="footer"
+        sx={{ 
+          top: 'auto', 
+          bottom: 0,
+          zIndex: (theme) => theme.zIndex.appBar
+        }}
+      >
         <Toolbar style={{ justifyContent: "center" }}>
           <Typography variant="body1" color="inherit" style={{ marginRight: "15px" }}>
             <Link href="/about" color="inherit" underline="hover">
