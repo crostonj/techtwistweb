@@ -1,61 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Button, Box, Menu, MenuItem } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  Box,
+  Typography,
+  IconButton,
+} from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import navigationData from "../../data/primaryNavigation.json";
 
 function Navbar() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [menuData, setMenuData] = useState([]);
+  const [secondaryMenu, setSecondaryMenu] = useState([]);
 
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  useEffect(() => {
+    // Load navigation data dynamically
+    setMenuData(navigationData);
+  }, []);
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
+  const handlePrimaryNavClick = (submenu) => {
+    setSecondaryMenu(submenu || []);
   };
 
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Box sx={{ display: "flex", flexGrow: 1 }}>
-          <Button color="inherit" component={Link} to="/products">
-            Products
-          </Button>
-          <Button color="inherit" onClick={handleMenuOpen}>
-            Retail Technology
-          </Button>
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={handleMenuClose}
+    <>
+      {/* Primary Navigation Bar */}
+      <AppBar position="static" color="primary">
+        <Toolbar>
+          <Box sx={{ display: "flex", flexGrow: 1 }}>
+            {menuData.map((item, index) =>
+              item.label !== "Profile" ? (
+                <Button
+                  key={index}
+                  color="inherit"
+                  component={Link}
+                  to={item.path}
+                  onClick={() => handlePrimaryNavClick(item.submenu)}
+                >
+                  {item.label}
+                </Button>
+              ) : null
+            )}
+          </Box>
+          <IconButton
+            color="inherit"
+            component={Link}
+            to="/profile"
+            sx={{ marginLeft: "auto" }}
           >
-            <MenuItem
-              component={Link}
-              to="/RetailTechnologyPage"
-              onClick={handleMenuClose}
-            >
-              Retail Technology
-            </MenuItem>
-            <MenuItem
-              component={Link}
-              to="/PointOfSale"
-              onClick={handleMenuClose}
-            >
-              Point of Sale
-            </MenuItem>
-            <MenuItem
-              component={Link}
-              to="/POSInfoPage"
-              onClick={handleMenuClose}
-            >
-              POSInfoPage
-            </MenuItem>
-          </Menu>
-        </Box>
-        <Button color="inherit" component={Link} to="/profile">
-          Profile
-        </Button>
-      </Toolbar>
-    </AppBar>
+            <AccountCircleIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+      {/* Secondary Navigation Bar */}
+      <AppBar position="static" color="secondary">
+        <Toolbar>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "flex-start",
+              flexGrow: 1,
+            }}
+          >
+            {secondaryMenu.map((subItem, subIndex) => (
+              <Button
+                key={subIndex}
+                color="inherit"
+                component={Link}
+                to={subItem.path}
+              >
+                {subItem.label}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }
 

@@ -13,6 +13,11 @@ import "./App.css";
 import POSInfoPage from "./components/POSInfoPage";
 import AboutUs from "./pages/AboutUs"; // Import AboutUs component
 import ContactUs from "./pages/ContactUs"; // Import ContactUs component
+import RetailPage from "./pages/RetailPage";
+import FoodBeveragePage from "./pages/FoodBeveragePage";
+import PersonalServicesPage from "./pages/PersonalServicesPage";
+import HealthWellnessPage from "./pages/HealthWellnessPage";
+import HospitalityTourismPage from "./pages/HospitalityTourismPage";
 
 const theme = createTheme({
   palette: {
@@ -48,6 +53,7 @@ function App() {
             </Toolbar>
           </AppBar>
           <Navbar />
+
           <Container style={{ marginTop: "20px" }}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -58,6 +64,11 @@ function App() {
               <Route path="/retailtechnologypage" element={<RetailTechnologyPage />} />
               <Route path="/pointofsale" element={<PointofSale />} />
               <Route path="/POSInfoPage" element={<POSInfoPage />} />
+              <Route path="/retail" element={<RetailPage />} />
+              <Route path="/food-beverage" element={<FoodBeveragePage />} />
+              <Route path="/personal-services" element={<PersonalServicesPage />} />
+              <Route path="/health-wellness" element={<HealthWellnessPage />} />
+              <Route path="/hospitality-tourism" element={<HospitalityTourismPage />} />
             </Routes>
           </Container>
           <Footer />

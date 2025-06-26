@@ -1,0 +1,166 @@
+[
+  {
+    "label": "Retail",
+    "path": "/retail",
+    "submenu": [
+      {
+        "label": "Retail POS Systems",
+        "path": "/products"
+      },
+      {
+        "label": "Barcode Scanners",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Receipt Printers",
+        "path": "/products"
+      },
+      {
+        "label": "Cash Drawers",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Credit Card Readers",
+        "path": "/products"
+      },
+      {
+        "label": "Inventory Management Software",
+        "path": "/products/detail"
+      }
+    ]
+  },
+  {
+    "label": "Food and Beverage",
+    "path": "/food-beverage",
+    "submenu": [
+      {
+        "label": "Restaurant POS Terminals",
+        "path": "/products"
+      },
+      {
+        "label": "Kitchen Display Systems",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Order Management Tablets",
+        "path": "/products"
+      },
+      {
+        "label": "Payment Processing",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Menu Management Software",
+        "path": "/products"
+      },
+      {
+        "label": "Mobile Ordering Apps",
+        "path": "/products/detail"
+      }
+    ]
+  },
+  {
+    "label": "Personal Services",
+    "path": "/personal-services",
+    "submenu": [
+      {
+        "label": "Appointment Scheduling Software",
+        "path": "/products"
+      },
+      {
+        "label": "Client Management Systems",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Payment Processing Terminals",
+        "path": "/products"
+      },
+      {
+        "label": "Digital Booking Platforms",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Service Management Apps",
+        "path": "/products"
+      },
+      {
+        "label": "Customer Communication Tools",
+        "path": "/products/detail"
+      }
+    ]
+  },
+  {
+    "label": "Health and Wellness",
+    "path": "/health-wellness",
+    "submenu": [
+      {
+        "label": "Medical Practice Management",
+        "path": "/products"
+      },
+      {
+        "label": "Electronic Health Records",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Patient Check-in Kiosks",
+        "path": "/products"
+      },
+      {
+        "label": "Telehealth Platforms",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Billing and Insurance Software",
+        "path": "/products"
+      },
+      {
+        "label": "Wellness Tracking Apps",
+        "path": "/products/detail"
+      }
+    ]
+  },
+  {
+    "label": "Hospitality and Tourism",
+    "path": "/hospitality-tourism",
+    "submenu": [
+      {
+        "label": "Hotel Management Systems",
+        "path": "/products"
+      },
+      {
+        "label": "Online Booking Platforms",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Property Management Software",
+        "path": "/products"
+      },
+      {
+        "label": "Guest Check-in Tablets",
+        "path": "/products/detail"
+      },
+      {
+        "label": "Revenue Management Tools",
+        "path": "/products"
+      },
+      {
+        "label": "Customer Experience Apps",
+        "path": "/products/detail"
+      }
+    ]
+  },
+  {
+    "label": "Profile",
+    "path": "/profile",
+    "submenu": [
+      {
+        "label": "User Settings",
+        "path": "/products"
+      },
+      {
+        "label": "Account Info",
+        "path": "/products/detail"
+      }
+    ]
+  }
+]
